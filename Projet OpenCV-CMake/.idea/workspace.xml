@@ -195,13 +195,6 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Projet_OpenCV_CMake" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Projet_OpenCV_CMake" TARGET_NAME="Projet_OpenCV_CMake" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Projet_OpenCV_CMake" RUN_TARGET_NAME="Projet_OpenCV_CMake">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>

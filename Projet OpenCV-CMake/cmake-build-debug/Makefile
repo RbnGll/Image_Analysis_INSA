@@ -48,10 +48,10 @@ RM = /usr/share/clion/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake"
+CMAKE_SOURCE_DIR = "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/cmake-build-debug"
+CMAKE_BINARY_DIR = "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -177,6 +177,63 @@ src/histogram.cpp.s:
 	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.s
 .PHONY : src/histogram.cpp.s
 
+<<<<<<< HEAD
+=======
+src/main_test_opencv.o: src/main_test_opencv.cpp.o
+
+.PHONY : src/main_test_opencv.o
+
+# target to build an object file
+src/main_test_opencv.cpp.o:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o
+.PHONY : src/main_test_opencv.cpp.o
+
+src/main_test_opencv.i: src/main_test_opencv.cpp.i
+
+.PHONY : src/main_test_opencv.i
+
+# target to preprocess a source file
+src/main_test_opencv.cpp.i:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.i
+.PHONY : src/main_test_opencv.cpp.i
+
+src/main_test_opencv.s: src/main_test_opencv.cpp.s
+
+.PHONY : src/main_test_opencv.s
+
+# target to generate assembly for a file
+src/main_test_opencv.cpp.s:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.s
+.PHONY : src/main_test_opencv.cpp.s
+
+src/thresholding.o: src/thresholding.cpp.o
+
+.PHONY : src/thresholding.o
+
+# target to build an object file
+src/thresholding.cpp.o:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.o
+.PHONY : src/thresholding.cpp.o
+
+src/thresholding.i: src/thresholding.cpp.i
+
+.PHONY : src/thresholding.i
+
+# target to preprocess a source file
+src/thresholding.cpp.i:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.i
+.PHONY : src/thresholding.cpp.i
+
+src/thresholding.s: src/thresholding.cpp.s
+
+.PHONY : src/thresholding.s
+
+# target to generate assembly for a file
+src/thresholding.cpp.s:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.s
+.PHONY : src/thresholding.cpp.s
+
+>>>>>>> refs/remotes/origin/master
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +249,15 @@ help:
 	@echo "... src/histogram.o"
 	@echo "... src/histogram.i"
 	@echo "... src/histogram.s"
+<<<<<<< HEAD
+=======
+	@echo "... src/main_test_opencv.o"
+	@echo "... src/main_test_opencv.i"
+	@echo "... src/main_test_opencv.s"
+	@echo "... src/thresholding.o"
+	@echo "... src/thresholding.i"
+	@echo "... src/thresholding.s"
+>>>>>>> refs/remotes/origin/master
 .PHONY : help
 
 

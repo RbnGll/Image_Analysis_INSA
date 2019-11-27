@@ -1,4 +1,7 @@
 /usr/share/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake"
--- Configuring done
--- Generating done
--- Build files have been written to: /home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/cmake-build-debug
+CMake Error at CMakeLists.txt:17:
+  Parse error.  Expected a command name, got unquoted argument with text
+  "=======".
+
+
+-- Configuring incomplete, errors occurred!

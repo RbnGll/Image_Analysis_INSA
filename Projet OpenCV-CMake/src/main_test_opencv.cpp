@@ -8,6 +8,8 @@
 
 
 #include <iostream>
+#include <thresholding.h>
+
 using namespace std;
 
 #include "opencv2/imgproc.hpp"
@@ -20,7 +22,11 @@ using namespace cv;
 int main (void) {
 
 	//charge et affiche l'image (� MODIFIER) :
+<<<<<<< HEAD
 	string imName = "/home-info/commun/p/p12/5info/irfBD/NicIcon/all-scans/00000.png";
+=======
+	string imName = "../../00000.png";
+>>>>>>> refs/remotes/origin/master
 	Mat im = imread(imName);
 	if(im.data == nullptr){
 		cerr << "Image not found: "<< imName << endl;
@@ -28,7 +34,11 @@ int main (void) {
 		//system("pause");
 		exit(EXIT_FAILURE);
 	}
+<<<<<<< HEAD
 	//imshow("exemple1", im);
+=======
+//	imshow("exemple1", im);
+>>>>>>> refs/remotes/origin/master
 
 	//applique une reduction de taille d'un facteur 5
 	//ici modifier pour ne reduire qu'a l'affichage 
@@ -39,7 +49,8 @@ int main (void) {
 	resize(im,imreduite,tailleReduite);
 	imshow("image reduite", imreduite);
 
-	computeHistogram("histogramme", im);
+//	computeHistogram("histogramme", im);
+	calc_threshold("threshold", im);
 
 	//termine le programme lorsqu'une touche est frappee
 	waitKey(0);
