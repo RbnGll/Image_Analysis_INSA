@@ -1,4 +1,4 @@
-# Install script for directory: /home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake
+# Install script for directory: /home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

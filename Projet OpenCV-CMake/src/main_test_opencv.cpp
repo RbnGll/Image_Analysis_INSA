@@ -1,13 +1,15 @@
 //////////////////////////////////////////////////////////////////////////
 // Option Images
-// Projet, séance 1
-// thème : premier pas en OpenCV
-// contenu : charge, affiche, réduction, calcul et affichage d'histogramme
+// Projet, sï¿½ance 1
+// thï¿½me : premier pas en OpenCV
+// contenu : charge, affiche, rï¿½duction, calcul et affichage d'histogramme
 // version : 17.1128
 //////////////////////////////////////////////////////////////////////////
 
 
 #include <iostream>
+#include <thresholding.h>
+
 using namespace std;
 
 #include "opencv2/imgproc.hpp"
@@ -19,8 +21,8 @@ using namespace cv;
 
 int main (void) {
 
-	//charge et affiche l'image (à MODIFIER) :
-	string imName = "../Lenna.png";
+	//charge et affiche l'image (ï¿½ MODIFIER) :
+	string imName = "../../00000.png";
 	Mat im = imread(imName);
 	if(im.data == nullptr){
 		cerr << "Image not found: "<< imName << endl;
@@ -28,18 +30,19 @@ int main (void) {
 		//system("pause");
 		exit(EXIT_FAILURE);
 	}
-	imshow("exemple1", im);
+//	imshow("exemple1", im);
 
 	//applique une reduction de taille d'un facteur 5
 	//ici modifier pour ne reduire qu'a l'affichage 
 	//comme demande dans l'enonce
 	int reduction = 5;
 	Size tailleReduite(im.cols/reduction, im.rows/reduction);
-	Mat imreduite = Mat(tailleReduite,CV_8UC3); //cree une image à 3 canaux de profondeur 8 bits chacuns
+	Mat imreduite = Mat(tailleReduite,CV_8UC3); //cree une image ï¿½ 3 canaux de profondeur 8 bits chacuns
 	resize(im,imreduite,tailleReduite);
 	imshow("image reduite", imreduite);
 
-	computeHistogram("histogramme", im);
+//	computeHistogram("histogramme", im);
+	calc_threshold("threshold", im);
 
 	//termine le programme lorsqu'une touche est frappee
 	waitKey(0);

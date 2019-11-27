@@ -43,10 +43,10 @@ RM = /usr/share/clion/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake"
+CMAKE_SOURCE_DIR = "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/cmake-build-debug"
+CMAKE_BINARY_DIR = "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Projet_OpenCV_CMake.dir/depend.make
@@ -59,40 +59,55 @@ include CMakeFiles/Projet_OpenCV_CMake.dir/flags.make
 
 CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.o: CMakeFiles/Projet_OpenCV_CMake.dir/flags.make
 CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.o: ../src/histogram.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.o -c "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/src/histogram.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.o -c "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/histogram.cpp"
 
 CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/src/histogram.cpp" > CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/histogram.cpp" > CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.i
 
 CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/src/histogram.cpp" -o CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/histogram.cpp" -o CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.s
 
 CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o: CMakeFiles/Projet_OpenCV_CMake.dir/flags.make
 CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o: ../src/main_test_opencv.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o -c "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/src/main_test_opencv.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o -c "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/main_test_opencv.cpp"
 
 CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/src/main_test_opencv.cpp" > CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/main_test_opencv.cpp" > CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.i
 
 CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/src/main_test_opencv.cpp" -o CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/main_test_opencv.cpp" -o CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.s
+
+CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.o: CMakeFiles/Projet_OpenCV_CMake.dir/flags.make
+CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.o: ../src/thresholding.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.o -c "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/thresholding.cpp"
+
+CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/thresholding.cpp" > CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.i
+
+CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/thresholding.cpp" -o CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.s
 
 # Object files for target Projet_OpenCV_CMake
 Projet_OpenCV_CMake_OBJECTS = \
 "CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.o" \
-"CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o"
+"CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o" \
+"CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.o"
 
 # External object files for target Projet_OpenCV_CMake
 Projet_OpenCV_CMake_EXTERNAL_OBJECTS =
 
 Projet_OpenCV_CMake: CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.o
 Projet_OpenCV_CMake: CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o
+Projet_OpenCV_CMake: CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.o
 Projet_OpenCV_CMake: CMakeFiles/Projet_OpenCV_CMake.dir/build.make
 Projet_OpenCV_CMake: /usr/local/opencv/lib/libopencv_gapi.so.4.1.2
 Projet_OpenCV_CMake: /usr/local/opencv/lib/libopencv_stitching.so.4.1.2
@@ -146,7 +161,7 @@ Projet_OpenCV_CMake: /usr/local/opencv/lib/libopencv_phase_unwrapping.so.4.1.2
 Projet_OpenCV_CMake: /usr/local/opencv/lib/libopencv_imgproc.so.4.1.2
 Projet_OpenCV_CMake: /usr/local/opencv/lib/libopencv_core.so.4.1.2
 Projet_OpenCV_CMake: CMakeFiles/Projet_OpenCV_CMake.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Projet_OpenCV_CMake"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Projet_OpenCV_CMake"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Projet_OpenCV_CMake.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -159,6 +174,6 @@ CMakeFiles/Projet_OpenCV_CMake.dir/clean:
 .PHONY : CMakeFiles/Projet_OpenCV_CMake.dir/clean
 
 CMakeFiles/Projet_OpenCV_CMake.dir/depend:
-	cd "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake" "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake" "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/cmake-build-debug" "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/cmake-build-debug" "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake" "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake" "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug" "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug" "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/Projet_OpenCV_CMake.dir/depend
 
