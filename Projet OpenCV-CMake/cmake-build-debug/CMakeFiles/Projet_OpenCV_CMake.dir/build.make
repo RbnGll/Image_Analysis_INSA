@@ -70,29 +70,29 @@ CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/src/histogram.cpp" -o CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.s
 
-CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o: CMakeFiles/Projet_OpenCV_CMake.dir/flags.make
-CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o: ../src/main_test_opencv.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o -c "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/src/main_test_opencv.cpp"
+CMakeFiles/Projet_OpenCV_CMake.dir/src/connected.cpp.o: CMakeFiles/Projet_OpenCV_CMake.dir/flags.make
+CMakeFiles/Projet_OpenCV_CMake.dir/src/connected.cpp.o: ../src/connected.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Projet_OpenCV_CMake.dir/src/connected.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Projet_OpenCV_CMake.dir/src/connected.cpp.o -c "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/src/connected.cpp"
 
-CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/src/main_test_opencv.cpp" > CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.i
+CMakeFiles/Projet_OpenCV_CMake.dir/src/connected.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Projet_OpenCV_CMake.dir/src/connected.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/src/connected.cpp" > CMakeFiles/Projet_OpenCV_CMake.dir/src/connected.cpp.i
 
-CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/src/main_test_opencv.cpp" -o CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.s
+CMakeFiles/Projet_OpenCV_CMake.dir/src/connected.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Projet_OpenCV_CMake.dir/src/connected.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/src/connected.cpp" -o CMakeFiles/Projet_OpenCV_CMake.dir/src/connected.cpp.s
 
 # Object files for target Projet_OpenCV_CMake
 Projet_OpenCV_CMake_OBJECTS = \
 "CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.o" \
-"CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o"
+"CMakeFiles/Projet_OpenCV_CMake.dir/src/connected.cpp.o"
 
 # External object files for target Projet_OpenCV_CMake
 Projet_OpenCV_CMake_EXTERNAL_OBJECTS =
 
 Projet_OpenCV_CMake: CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.o
-Projet_OpenCV_CMake: CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o
+Projet_OpenCV_CMake: CMakeFiles/Projet_OpenCV_CMake.dir/src/connected.cpp.o
 Projet_OpenCV_CMake: CMakeFiles/Projet_OpenCV_CMake.dir/build.make
 Projet_OpenCV_CMake: /usr/local/opencv/lib/libopencv_gapi.so.4.1.2
 Projet_OpenCV_CMake: /usr/local/opencv/lib/libopencv_stitching.so.4.1.2

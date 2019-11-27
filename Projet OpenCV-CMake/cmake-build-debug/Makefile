@@ -123,6 +123,33 @@ Projet_OpenCV_CMake/fast:
 	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/build
 .PHONY : Projet_OpenCV_CMake/fast
 
+src/connected.o: src/connected.cpp.o
+
+.PHONY : src/connected.o
+
+# target to build an object file
+src/connected.cpp.o:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/connected.cpp.o
+.PHONY : src/connected.cpp.o
+
+src/connected.i: src/connected.cpp.i
+
+.PHONY : src/connected.i
+
+# target to preprocess a source file
+src/connected.cpp.i:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/connected.cpp.i
+.PHONY : src/connected.cpp.i
+
+src/connected.s: src/connected.cpp.s
+
+.PHONY : src/connected.s
+
+# target to generate assembly for a file
+src/connected.cpp.s:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/connected.cpp.s
+.PHONY : src/connected.cpp.s
+
 src/histogram.o: src/histogram.cpp.o
 
 .PHONY : src/histogram.o
@@ -150,33 +177,6 @@ src/histogram.cpp.s:
 	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.s
 .PHONY : src/histogram.cpp.s
 
-src/main_test_opencv.o: src/main_test_opencv.cpp.o
-
-.PHONY : src/main_test_opencv.o
-
-# target to build an object file
-src/main_test_opencv.cpp.o:
-	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o
-.PHONY : src/main_test_opencv.cpp.o
-
-src/main_test_opencv.i: src/main_test_opencv.cpp.i
-
-.PHONY : src/main_test_opencv.i
-
-# target to preprocess a source file
-src/main_test_opencv.cpp.i:
-	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.i
-.PHONY : src/main_test_opencv.cpp.i
-
-src/main_test_opencv.s: src/main_test_opencv.cpp.s
-
-.PHONY : src/main_test_opencv.s
-
-# target to generate assembly for a file
-src/main_test_opencv.cpp.s:
-	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.s
-.PHONY : src/main_test_opencv.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Projet_OpenCV_CMake"
 	@echo "... edit_cache"
+	@echo "... src/connected.o"
+	@echo "... src/connected.i"
+	@echo "... src/connected.s"
 	@echo "... src/histogram.o"
 	@echo "... src/histogram.i"
 	@echo "... src/histogram.s"
-	@echo "... src/main_test_opencv.o"
-	@echo "... src/main_test_opencv.i"
-	@echo "... src/main_test_opencv.s"
 .PHONY : help
 
 

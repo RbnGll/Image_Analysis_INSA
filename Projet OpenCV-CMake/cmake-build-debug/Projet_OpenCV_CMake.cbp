@@ -88,13 +88,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/include/connected.h">
+			<Option target="Projet_OpenCV_CMake"/>
+		</Unit>
 		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/include/histogram.hpp">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
-		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/src/histogram.cpp">
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/src/connected.cpp">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
-		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/src/main_test_opencv.cpp">
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/src/histogram.cpp">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
 		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/CMakeLists.txt">

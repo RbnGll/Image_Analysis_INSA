@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.o"
-  "CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o"
+  "CMakeFiles/Projet_OpenCV_CMake.dir/src/connected.cpp.o"
   "Projet_OpenCV_CMake.pdb"
   "Projet_OpenCV_CMake"
 )
