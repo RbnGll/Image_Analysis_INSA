@@ -1,4 +1,4 @@
-/usr/share/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet OpenCV-CMake"
+/usr/share/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake"
 -- The C compiler identification is GNU 5.5.0
 -- The CXX compiler identification is GNU 5.5.0
 -- Check for working C compiler: /usr/bin/cc
@@ -16,4 +16,4 @@
 -- Found OpenCV: /usr/local/opencv (found version "4.1.2") 
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home-reseau/rguill/4INFO/Projet_analyse_image/Projet OpenCV-CMake/cmake-build-debug
+-- Build files have been written to: /home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/cmake-build-debug

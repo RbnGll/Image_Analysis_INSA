@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/home-reseau/rguill/4INFO/Projet_analyse_image/Projet OpenCV-CMake/include" -isystem /usr/local/opencv/include/opencv4 
+CXX_INCLUDES = -I"/home-reseau/rguill/4INFO/Projet_analyse_image/Projet/Projet OpenCV-CMake/include" -isystem /usr/local/opencv/include/opencv4 
 
