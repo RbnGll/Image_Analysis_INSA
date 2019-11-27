@@ -69,11 +69,4 @@ void test_raw_img(const char *infname, const char *outfname,
     free(img); free(out); free(out_uc);
 }
 
-
-main()
-{
-    test_inline_img();
-    test_raw_img("img.raw", "out.raw", 321, 241);
-}
-
 #endif // _TEST
