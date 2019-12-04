@@ -44,8 +44,15 @@ int main (void) {
 
 //	computeHistogram("histogramme", im);
 //	calc_threshold("threshold", im);
-    performSift();
-//    extract("../Images/00000.png", 0, 0, 0, 0);
+//    performSift();
+
+
+//    extract("../Images/00000.png", 2145, 548, 294, 3162);
+//    extract("/home-info/commun/p/p12/5info/irfBD/NicIcon/all-scans/02202.png", 2201, 468, 257, 3232);
+    extract("/home-info/commun/p/p12/5info/irfBD/NicIcon/all-scans/02601.png", 2205, 470, 263, 3232);
+
+
+
 	//termine le programme lorsqu'une touche est frappee
 	waitKey(0);
 	//system("pause");
