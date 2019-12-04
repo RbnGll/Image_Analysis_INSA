@@ -11,25 +11,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c08b6dc-3910-4be3-9ccc-565aa0bdbfc0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Images/00000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/SquareExtractor.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/sift.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SquareExtractor.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sift.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Projet_OpenCV_CMake.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Projet_OpenCV_CMake.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_test_opencv.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_test_opencv.cpp" afterDir="false" />
+    <list default="true" id="1c08b6dc-3910-4be3-9ccc-565aa0bdbfc0" name="Default Changelist" comment="Add SquareExtractor">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,14 +39,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SquareExtractor.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#41#72#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -94,6 +86,7 @@
         <option value="$PROJECT_DIR$/include/SquareExtractor.h" />
         <option value="$PROJECT_DIR$/src/SquareExtractor.cpp" />
         <option value="$PROJECT_DIR$/src/main_test_opencv.cpp" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -191,23 +184,31 @@
       <workItem from="1575451753356" duration="26000" />
       <workItem from="1575451868170" duration="3747000" />
       <workItem from="1575456367495" duration="4423000" />
-      <workItem from="1575462523039" duration="267000" />
+      <workItem from="1575462523039" duration="463000" />
     </task>
+    <task id="LOCAL-00001" summary="Add SquareExtractor">
+      <created>1575462792123</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575462792123</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13778000" />
+    <option name="totallyTimeSpent" value="13974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1920" height="1021" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21558164" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21558164" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.30827886" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.67342585" visible="true" weight="0.28649238" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6728922" weight="0.28649238" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.35620916" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -215,8 +216,8 @@
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.49733192" weight="0.3280899" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.32657418" side_tool="true" weight="0.32897604" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.4994664" weight="0.32897604" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010672" side_tool="true" visible="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49893278" visible="true" weight="0.32897604" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.3280899" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -272,13 +273,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Add SquareExtractor" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/binary image_screenshot_27.11.2019.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -401,10 +395,17 @@
     <entry file="file://$PROJECT_DIR$/src/SquareExtractor.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#41#72#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
