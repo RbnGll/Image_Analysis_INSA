@@ -4,8 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/SquareExtractor.cpp" "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/src/SquareExtractor.cpp.o"
   "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/histogram.cpp" "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.o"
   "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/main_test_opencv.cpp" "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o"
+  "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/sift.cpp" "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/src/sift.cpp.o"
   "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/thresholding.cpp" "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

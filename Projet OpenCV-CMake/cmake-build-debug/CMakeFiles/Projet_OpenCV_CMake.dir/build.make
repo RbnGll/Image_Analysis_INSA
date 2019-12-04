@@ -96,11 +96,39 @@ CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/thresholding.cpp" -o CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.s
 
+CMakeFiles/Projet_OpenCV_CMake.dir/src/sift.cpp.o: CMakeFiles/Projet_OpenCV_CMake.dir/flags.make
+CMakeFiles/Projet_OpenCV_CMake.dir/src/sift.cpp.o: ../src/sift.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Projet_OpenCV_CMake.dir/src/sift.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Projet_OpenCV_CMake.dir/src/sift.cpp.o -c "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/sift.cpp"
+
+CMakeFiles/Projet_OpenCV_CMake.dir/src/sift.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Projet_OpenCV_CMake.dir/src/sift.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/sift.cpp" > CMakeFiles/Projet_OpenCV_CMake.dir/src/sift.cpp.i
+
+CMakeFiles/Projet_OpenCV_CMake.dir/src/sift.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Projet_OpenCV_CMake.dir/src/sift.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/sift.cpp" -o CMakeFiles/Projet_OpenCV_CMake.dir/src/sift.cpp.s
+
+CMakeFiles/Projet_OpenCV_CMake.dir/src/SquareExtractor.cpp.o: CMakeFiles/Projet_OpenCV_CMake.dir/flags.make
+CMakeFiles/Projet_OpenCV_CMake.dir/src/SquareExtractor.cpp.o: ../src/SquareExtractor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Projet_OpenCV_CMake.dir/src/SquareExtractor.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Projet_OpenCV_CMake.dir/src/SquareExtractor.cpp.o -c "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/SquareExtractor.cpp"
+
+CMakeFiles/Projet_OpenCV_CMake.dir/src/SquareExtractor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Projet_OpenCV_CMake.dir/src/SquareExtractor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/SquareExtractor.cpp" > CMakeFiles/Projet_OpenCV_CMake.dir/src/SquareExtractor.cpp.i
+
+CMakeFiles/Projet_OpenCV_CMake.dir/src/SquareExtractor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Projet_OpenCV_CMake.dir/src/SquareExtractor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/SquareExtractor.cpp" -o CMakeFiles/Projet_OpenCV_CMake.dir/src/SquareExtractor.cpp.s
+
 # Object files for target Projet_OpenCV_CMake
 Projet_OpenCV_CMake_OBJECTS = \
 "CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.o" \
 "CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o" \
-"CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.o"
+"CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.o" \
+"CMakeFiles/Projet_OpenCV_CMake.dir/src/sift.cpp.o" \
+"CMakeFiles/Projet_OpenCV_CMake.dir/src/SquareExtractor.cpp.o"
 
 # External object files for target Projet_OpenCV_CMake
 Projet_OpenCV_CMake_EXTERNAL_OBJECTS =
@@ -108,6 +136,8 @@ Projet_OpenCV_CMake_EXTERNAL_OBJECTS =
 Projet_OpenCV_CMake: CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.o
 Projet_OpenCV_CMake: CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o
 Projet_OpenCV_CMake: CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.o
+Projet_OpenCV_CMake: CMakeFiles/Projet_OpenCV_CMake.dir/src/sift.cpp.o
+Projet_OpenCV_CMake: CMakeFiles/Projet_OpenCV_CMake.dir/src/SquareExtractor.cpp.o
 Projet_OpenCV_CMake: CMakeFiles/Projet_OpenCV_CMake.dir/build.make
 Projet_OpenCV_CMake: /usr/local/opencv/lib/libopencv_gapi.so.4.1.2
 Projet_OpenCV_CMake: /usr/local/opencv/lib/libopencv_stitching.so.4.1.2
@@ -161,7 +191,7 @@ Projet_OpenCV_CMake: /usr/local/opencv/lib/libopencv_phase_unwrapping.so.4.1.2
 Projet_OpenCV_CMake: /usr/local/opencv/lib/libopencv_imgproc.so.4.1.2
 Projet_OpenCV_CMake: /usr/local/opencv/lib/libopencv_core.so.4.1.2
 Projet_OpenCV_CMake: CMakeFiles/Projet_OpenCV_CMake.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Projet_OpenCV_CMake"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Projet_OpenCV_CMake"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Projet_OpenCV_CMake.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

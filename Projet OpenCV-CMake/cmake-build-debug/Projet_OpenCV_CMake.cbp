@@ -88,16 +88,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/include/SquareExtractor.h">
+			<Option target="Projet_OpenCV_CMake"/>
+		</Unit>
 		<Unit filename="/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/include/histogram.hpp">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
+		<Unit filename="/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/include/sift.h">
+			<Option target="Projet_OpenCV_CMake"/>
+		</Unit>
 		<Unit filename="/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/include/thresholding.h">
+			<Option target="Projet_OpenCV_CMake"/>
+		</Unit>
+		<Unit filename="/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/SquareExtractor.cpp">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
 		<Unit filename="/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/histogram.cpp">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
 		<Unit filename="/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/main_test_opencv.cpp">
+			<Option target="Projet_OpenCV_CMake"/>
+		</Unit>
+		<Unit filename="/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/sift.cpp">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
 		<Unit filename="/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/src/thresholding.cpp">

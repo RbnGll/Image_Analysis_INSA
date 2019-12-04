@@ -9,6 +9,8 @@
 
 #include <iostream>
 #include <thresholding.h>
+#include <SquareExtractor.h>
+#include <sift.h>
 
 using namespace std;
 
@@ -39,11 +41,12 @@ int main (void) {
 	Size tailleReduite(im.cols/reduction, im.rows/reduction);
 	Mat imreduite = Mat(tailleReduite,CV_8UC3); //cree une image � 3 canaux de profondeur 8 bits chacuns
 	resize(im,imreduite,tailleReduite);
-	imshow("image reduite", imreduite);
+//	imshow("image reduite", imreduite);
 
 //	computeHistogram("histogramme", im);
-	calc_threshold("threshold", im);
-
+//	calc_threshold("threshold", im);
+    performSift();
+//    extract("../Images/00000.png", 0, 0, 0, 0);
 	//termine le programme lorsqu'une touche est frappee
 	waitKey(0);
 	//system("pause");

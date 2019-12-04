@@ -123,6 +123,33 @@ Projet_OpenCV_CMake/fast:
 	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/build
 .PHONY : Projet_OpenCV_CMake/fast
 
+src/SquareExtractor.o: src/SquareExtractor.cpp.o
+
+.PHONY : src/SquareExtractor.o
+
+# target to build an object file
+src/SquareExtractor.cpp.o:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/SquareExtractor.cpp.o
+.PHONY : src/SquareExtractor.cpp.o
+
+src/SquareExtractor.i: src/SquareExtractor.cpp.i
+
+.PHONY : src/SquareExtractor.i
+
+# target to preprocess a source file
+src/SquareExtractor.cpp.i:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/SquareExtractor.cpp.i
+.PHONY : src/SquareExtractor.cpp.i
+
+src/SquareExtractor.s: src/SquareExtractor.cpp.s
+
+.PHONY : src/SquareExtractor.s
+
+# target to generate assembly for a file
+src/SquareExtractor.cpp.s:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/SquareExtractor.cpp.s
+.PHONY : src/SquareExtractor.cpp.s
+
 src/histogram.o: src/histogram.cpp.o
 
 .PHONY : src/histogram.o
@@ -177,6 +204,33 @@ src/main_test_opencv.cpp.s:
 	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.s
 .PHONY : src/main_test_opencv.cpp.s
 
+src/sift.o: src/sift.cpp.o
+
+.PHONY : src/sift.o
+
+# target to build an object file
+src/sift.cpp.o:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/sift.cpp.o
+.PHONY : src/sift.cpp.o
+
+src/sift.i: src/sift.cpp.i
+
+.PHONY : src/sift.i
+
+# target to preprocess a source file
+src/sift.cpp.i:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/sift.cpp.i
+.PHONY : src/sift.cpp.i
+
+src/sift.s: src/sift.cpp.s
+
+.PHONY : src/sift.s
+
+# target to generate assembly for a file
+src/sift.cpp.s:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/sift.cpp.s
+.PHONY : src/sift.cpp.s
+
 src/thresholding.o: src/thresholding.cpp.o
 
 .PHONY : src/thresholding.o
@@ -213,12 +267,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Projet_OpenCV_CMake"
 	@echo "... edit_cache"
+	@echo "... src/SquareExtractor.o"
+	@echo "... src/SquareExtractor.i"
+	@echo "... src/SquareExtractor.s"
 	@echo "... src/histogram.o"
 	@echo "... src/histogram.i"
 	@echo "... src/histogram.s"
 	@echo "... src/main_test_opencv.o"
 	@echo "... src/main_test_opencv.i"
 	@echo "... src/main_test_opencv.s"
+	@echo "... src/sift.o"
+	@echo "... src/sift.i"
+	@echo "... src/sift.s"
 	@echo "... src/thresholding.o"
 	@echo "... src/thresholding.i"
 	@echo "... src/thresholding.s"

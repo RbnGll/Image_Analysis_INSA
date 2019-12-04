@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.o"
   "CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o"
   "CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.o"
+  "CMakeFiles/Projet_OpenCV_CMake.dir/src/sift.cpp.o"
+  "CMakeFiles/Projet_OpenCV_CMake.dir/src/SquareExtractor.cpp.o"
   "Projet_OpenCV_CMake.pdb"
   "Projet_OpenCV_CMake"
 )
