@@ -4,7 +4,7 @@
 
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/highgui.hpp>
-#include "sift.h"
+#include "matcher.h"
 #include <vector>
 #include <opencv2/xfeatures2d/nonfree.hpp>
 
@@ -13,8 +13,7 @@ using namespace cv;
 using namespace cv::xfeatures2d;
 
 void performSift() {
-    surfTest();
-    return;
+
 //    Mat queryImg = imread("../Images/query.png", 0);    // Load as gray scale
 //    Mat trainImg = imread("../Images/train.png", 0);    // Load as gray scale
     Mat queryImg = imread("../Images/a.jpeg", 0);    // Load as gray scale
@@ -40,9 +39,9 @@ void performSift() {
 //    printf("Found %d and %d keypoints.\n", queryKeypoints.size(), trainKeypoints.size());
 }
 
-void surfTest() {
-    Mat img1 = imread("../Images/query.png", 0);    // Load as gray scale
-    Mat img2= imread("../Images/train.png", 0);    // Load as gray scale
+bool surfTest(std::string ref, std::string qry) {
+    Mat img1 = imread(ref, 0);    // Load as gray scale
+    Mat img2= imread(qry, 0);    // Load as gray scale
 
     int minHessian = 400;
     Ptr<SURF> detector = SURF::create( minHessian );
@@ -58,7 +57,7 @@ void surfTest() {
     matcher->knnMatch( descriptors1, descriptors2, knn_matches, 2 );
 
     //-- Filter matches using the Lowe's ratio surfTest
-    const float ratio_thresh = 0.7f;
+    const float ratio_thresh = 0.8f;                            // Tune this parameter!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     std::vector<DMatch> good_matches;
     for (size_t i = 0; i < knn_matches.size(); i++) {
         if (knn_matches[i][0].distance < ratio_thresh * knn_matches[i][1].distance)
@@ -72,6 +71,7 @@ void surfTest() {
     //-- Show detected matches
     imshow("Good Matches", img_matches );
 
+    return good_matches.size() > 10;                       // Tune this threshold!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 }
 
 

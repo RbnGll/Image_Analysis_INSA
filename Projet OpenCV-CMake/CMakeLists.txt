@@ -11,7 +11,7 @@ include_directories(include ${OpenCV_INCLUDE_DIRS})
 add_executable(Projet_OpenCV_CMake
         include/histogram.hpp
         src/histogram.cpp
-        src/main_test_opencv.cpp src/thresholding.cpp include/thresholding.h src/sift.cpp include/sift.h src/SquareExtractor.cpp include/SquareExtractor.h src/SquareExtractor.cpp include/SquareExtractor.h)
+        src/main_test_opencv.cpp src/thresholding.cpp include/thresholding.h src/matcher.cpp include/matcher.h src/SquareExtractor.cpp include/SquareExtractor.h src/SquareExtractor.cpp include/SquareExtractor.h)
 
 target_link_libraries(Projet_OpenCV_CMake ${OpenCV_LIBS})
 

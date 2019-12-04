@@ -204,32 +204,32 @@ src/main_test_opencv.cpp.s:
 	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.s
 .PHONY : src/main_test_opencv.cpp.s
 
-src/sift.o: src/sift.cpp.o
+src/matcher.o: src/matcher.cpp.o
 
-.PHONY : src/sift.o
+.PHONY : src/matcher.o
 
 # target to build an object file
-src/sift.cpp.o:
-	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/sift.cpp.o
-.PHONY : src/sift.cpp.o
+src/matcher.cpp.o:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/matcher.cpp.o
+.PHONY : src/matcher.cpp.o
 
-src/sift.i: src/sift.cpp.i
+src/matcher.i: src/matcher.cpp.i
 
-.PHONY : src/sift.i
+.PHONY : src/matcher.i
 
 # target to preprocess a source file
-src/sift.cpp.i:
-	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/sift.cpp.i
-.PHONY : src/sift.cpp.i
+src/matcher.cpp.i:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/matcher.cpp.i
+.PHONY : src/matcher.cpp.i
 
-src/sift.s: src/sift.cpp.s
+src/matcher.s: src/matcher.cpp.s
 
-.PHONY : src/sift.s
+.PHONY : src/matcher.s
 
 # target to generate assembly for a file
-src/sift.cpp.s:
-	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/sift.cpp.s
-.PHONY : src/sift.cpp.s
+src/matcher.cpp.s:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/matcher.cpp.s
+.PHONY : src/matcher.cpp.s
 
 src/thresholding.o: src/thresholding.cpp.o
 
@@ -276,9 +276,9 @@ help:
 	@echo "... src/main_test_opencv.o"
 	@echo "... src/main_test_opencv.i"
 	@echo "... src/main_test_opencv.s"
-	@echo "... src/sift.o"
-	@echo "... src/sift.i"
-	@echo "... src/sift.s"
+	@echo "... src/matcher.o"
+	@echo "... src/matcher.i"
+	@echo "... src/matcher.s"
 	@echo "... src/thresholding.o"
 	@echo "... src/thresholding.i"
 	@echo "... src/thresholding.s"
