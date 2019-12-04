@@ -32,7 +32,6 @@ int main (void) {
 		//system("pause");
 		exit(EXIT_FAILURE);
 	}
-//	imshow("exemple1", im);
 
 	//applique une reduction de taille d'un facteur 5
 	//ici modifier pour ne reduire qu'a l'affichage 
