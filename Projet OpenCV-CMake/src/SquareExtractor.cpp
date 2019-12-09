@@ -36,8 +36,8 @@ void extract(std::string path, int ur_X, int ur_Y, int ll_X, int ll_Y) {
     std::vector<cv::Mat> resVec;
     for (int i = 0; i < 5; ++i) {
         for (int j = 0; j < 7; ++j) {
-            int squareX = (xOffsets[i] + ll_X) * scaleX;
-            int squareY = (yOffsets[j] + ur_Y) * scaleY;
+            int squareX = ll_X + (xOffsets[i]) * scaleX;
+            int squareY = ur_Y + (yOffsets[j]) * scaleY;
             cv::Mat firstSquare = getSquare(input,
                                         squareX,
                                         squareY,
