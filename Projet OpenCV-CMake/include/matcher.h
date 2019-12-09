@@ -12,8 +12,20 @@ using namespace std;
 using namespace cv;
 
 void performSift();
-bool surfTest(std::string ref, std::string qry);
 
+
+class Matcher {
+private:
+    static float DEFAULT_RATIO;
+
+    float ratio_thresh;
+    int surf(std::string ref, std::string qry);
+
+public:
+    Matcher(float ratio) : ratio_thresh(ratio) {};
+    Matcher() : Matcher(DEFAULT_RATIO) {};
+    void classifyImage(const string& path);
+};
 
 
 #endif //PROJET_OPENCV_CMAKE_MATCHER_H

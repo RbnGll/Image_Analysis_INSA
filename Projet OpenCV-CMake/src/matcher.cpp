@@ -6,11 +6,76 @@
 #include <opencv2/highgui.hpp>
 #include "matcher.h"
 #include <vector>
+#include <map>
+#include <iterator>
 #include <opencv2/xfeatures2d/nonfree.hpp>
 
 using namespace std;
 using namespace cv;
 using namespace cv::xfeatures2d;
+
+float Matcher::DEFAULT_RATIO = 0.9f;
+
+
+int Matcher::surf(std::string ref, std::string qry) {
+    Mat img1 = imread(ref, 0);    // Load as gray scale
+    Mat img2= imread(qry, 0);    // Load as gray scale
+
+    int minHessian = 400;
+    Ptr<SURF> detector = SURF::create( minHessian );
+    std::vector<KeyPoint> keypoints1, keypoints2;
+    Mat descriptors1, descriptors2;
+    detector->detectAndCompute( img1, noArray(), keypoints1, descriptors1 );
+    detector->detectAndCompute( img2, noArray(), keypoints2, descriptors2 );
+
+    //-- Step 2: Matching descriptor vectors with a FLANN based matcher
+    // Since SURF is a floating-point descriptor NORM_L2 is used
+    Ptr<DescriptorMatcher> matcher = DescriptorMatcher::create(DescriptorMatcher::FLANNBASED);
+    std::vector< std::vector<DMatch> > knn_matches;
+    matcher->knnMatch( descriptors1, descriptors2, knn_matches, 2 );
+
+    //-- Filter matches using the Lowe's ratio surfTest
+    const float thresh = this->ratio_thresh;
+    std::vector<DMatch> good_matches;
+    for (size_t i = 0; i < knn_matches.size(); i++) {
+        if (knn_matches[i][0].distance < thresh * knn_matches[i][1].distance)
+            good_matches.push_back(knn_matches[i][0]);
+    }
+
+    //-- Draw matches
+    Mat img_matches;
+    drawMatches( img1, keypoints1, img2, keypoints2, good_matches, img_matches, Scalar::all(-1),
+                 Scalar::all(-1), std::vector<char>(), DrawMatchesFlags::NOT_DRAW_SINGLE_POINTS );
+    //-- Show detected matches
+    imshow("Good Matches", img_matches );
+
+    return good_matches.size();
+}
+
+void Matcher::classifyImage(const string& path) {
+    map<string, int> matches;
+    string classNames[] = {"accident", "car", "electricity", "fire", "gas", "paramedics", "police", "bomb", "casualty",
+     "firebrigade", "flood", "injury", "person", "roadblock"};
+    for (int i = 0; i < classNames->length(); ++i) {
+        int _matches = surf(path, "../Images/Icons/"+ classNames[i] +".png");
+        matches.insert(pair<string, int>(classNames[i], _matches));
+    }
+    cout << "Classification result of " << path << ": " << endl;
+    map<string, int>::iterator itr;
+    int maxMatch = 0;
+    string maxCls;
+    for(itr = matches.begin(); itr != matches.end(); ++itr) {
+        cout << '\t' << itr->first << "\t---\t" << itr->second << " matches" << endl;
+        if (maxMatch <= itr->second) {
+            maxCls = itr->first;
+            maxMatch = itr->second;
+        }
+    }
+    cout << "Best match: " << maxMatch << " " << maxCls << "matches" << endl;
+    cv::Mat _img = cv::imread(path);
+    imwrite("../ImageResult/" + maxCls + "/" + path.substr(14, path.size()), _img);
+}
+
 
 void performSift() {
 
@@ -31,47 +96,10 @@ void performSift() {
     Ptr<cv::xfeatures2d::SIFT> detector = SiftFeatureDetector::create();
     std::vector<cv::KeyPoint> keypoints;
     detector->detect(trainImg, keypoints);
-    printf("Found %dkeypoints.\n", keypoints.size());
+    cout << "Found " << keypoints.size() << " keypoints" << endl;
 
 
 
     // Print how many keypoints were found in each image.
 //    printf("Found %d and %d keypoints.\n", queryKeypoints.size(), trainKeypoints.size());
 }
-
-bool surfTest(std::string ref, std::string qry) {
-    Mat img1 = imread(ref, 0);    // Load as gray scale
-    Mat img2= imread(qry, 0);    // Load as gray scale
-
-    int minHessian = 400;
-    Ptr<SURF> detector = SURF::create( minHessian );
-    std::vector<KeyPoint> keypoints1, keypoints2;
-    Mat descriptors1, descriptors2;
-    detector->detectAndCompute( img1, noArray(), keypoints1, descriptors1 );
-    detector->detectAndCompute( img2, noArray(), keypoints2, descriptors2 );
-
-    //-- Step 2: Matching descriptor vectors with a FLANN based matcher
-    // Since SURF is a floating-point descriptor NORM_L2 is used
-    Ptr<DescriptorMatcher> matcher = DescriptorMatcher::create(DescriptorMatcher::FLANNBASED);
-    std::vector< std::vector<DMatch> > knn_matches;
-    matcher->knnMatch( descriptors1, descriptors2, knn_matches, 2 );
-
-    //-- Filter matches using the Lowe's ratio surfTest
-    const float ratio_thresh = 0.8f;                            // Tune this parameter!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    std::vector<DMatch> good_matches;
-    for (size_t i = 0; i < knn_matches.size(); i++) {
-        if (knn_matches[i][0].distance < ratio_thresh * knn_matches[i][1].distance)
-            good_matches.push_back(knn_matches[i][0]);
-    }
-
-    //-- Draw matches
-    Mat img_matches;
-    drawMatches( img1, keypoints1, img2, keypoints2, good_matches, img_matches, Scalar::all(-1),
-                 Scalar::all(-1), std::vector<char>(), DrawMatchesFlags::NOT_DRAW_SINGLE_POINTS );
-    //-- Show detected matches
-    imshow("Good Matches", img_matches );
-
-    return good_matches.size() > 10;                       // Tune this threshold!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-}
-
-
