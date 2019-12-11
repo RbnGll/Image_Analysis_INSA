@@ -18,8 +18,9 @@ float Matcher::DEFAULT_RATIO = 0.8f;
 int Matcher::DEFAULT_HESS = 300;
 
 
-int Matcher::surf(std::string ref, std::string qry) {
-    Mat img1 = imread(ref, 0);    // Load as gray scale
+int Matcher::surf(cv::Mat mat, const std::string& qry) {
+//    Mat img1 = imread(ref + ".png", 0);    // Load as gray scale
+    Mat img1 = mat;
     Mat img2= imread(qry, 0);    // Load as gray scale
 
     int minHessian = hess;
@@ -53,27 +54,27 @@ int Matcher::surf(std::string ref, std::string qry) {
     return good_matches.size();
 }
 
-string Matcher::classifyImage(const string& basePath, const string& fileName) {
-    string path = basePath + "/" + fileName;
-    map<string, int> matches;
+string Matcher::classifyImage(cv::Mat img) {
     string classNames[] = {"accident", "car", "electricity", "fire", "gas", "paramedics", "police", "bomb", "casualty",
      "firebrigade", "flood", "injury", "person", "roadblock"};
+
+    map<string, int> matches;
     for (int i = 0; i < classNames->length(); ++i) {
-        int _matches = surf(path, "../Images/Icons/"+ classNames[i] +".png");
+        int _matches = surf(img, "../Images/Icons/"+ classNames[i] +".png");
         matches.insert(pair<string, int>(classNames[i], _matches));
     }
-    cout << "Classification result of " << path << ": " << endl;
+//    cout << "Classification result of " << path << ": " << endl;
     map<string, int>::iterator itr;
     int maxMatch = 0;
     string maxCls;
     for(itr = matches.begin(); itr != matches.end(); ++itr) {
-        cout << '\t' << itr->first << "\t---\t" << itr->second << " matches" << endl;
+//        cout << '\t' << itr->first << "\t---\t" << itr->second << " matches" << endl;
         if (maxMatch <= itr->second) {
             maxCls = itr->first;
             maxMatch = itr->second;
         }
     }
-    cout << "Best match: " << maxMatch << " " << maxCls << " matches" << endl;
+//    cout << "Best match: " << maxMatch << " " << maxCls << " matches" << endl;
 //    cv::Mat _img = cv::imread(path);
 //    imwrite("../ImageResult/" + maxCls + "/" + path.substr(14, path.size()), _img);
     return maxCls;

@@ -9,8 +9,8 @@
 #include "SquareExtractor.h"
 using namespace cv;
 
-void extract(std::string basePath, std::string name, int ur_X, int ur_Y, int ll_X, int ll_Y) {
-    std::string path = basePath + "/" + name + ".png";
+std::vector<cv::Mat> extract(std::string basePath, std::string name, int ur_X, int ur_Y, int ll_X, int ll_Y) {
+    std::string path = basePath + name + ".png";
     //                reference: 2145, 548, 294, 3162
     const int SIZE_X = 2480;     // Same size for all images
     const int SIZE_Y = 3508;
@@ -67,18 +67,21 @@ void extract(std::string basePath, std::string name, int ur_X, int ur_Y, int ll_
     }
 
 
-    // Produce extracted handwritten images
-    for (int k = 0; k < resVec.size(); ++k) {
-        cv::Mat _img = resVec[k];
-        std::string pathToWrite = "../ImageResult/Unclassified/" + name.substr(0, 3) + "/Square" + std::to_string(k) + ".png";
-        imwrite(pathToWrite, _img);
-    }
+//    // Produce extracted handwritten images
+//    for (int k = 0; k < resVec.size(); ++k) {
+//        cv::Mat _img = resVec[k];
+//        std::string pathToWrite = "../ImageResult/Unclassified/" + name.substr(0, 3) + "/Square" + std::to_string(k) + ".png";
+//        imwrite(pathToWrite, _img);
+//    }
+//
+//    // Produce detected icons
+//    for (int k = 0; k < iconVec.size(); ++k) {
+//        cv::Mat _img = iconVec[k];
+//        imwrite("../ImageResult/Unclassified/" + name.substr(0, 3) + "/Icon" + std::to_string(k) + ".png", _img);
+//    }
 
-    // Produce detected icons
-    for (int k = 0; k < iconVec.size(); ++k) {
-        cv::Mat _img = iconVec[k];
-        imwrite("../ImageResult/Unclassified/" + name.substr(0, 3) + "/Icon" + std::to_string(k) + ".png", _img);
-    }
+    iconVec.insert(std::end(iconVec), std::begin(resVec), std::end(resVec));
+    return iconVec;
 }
 
 cv::Mat getSquare(cv::Mat src, int x, int y, int disX, int disY) {

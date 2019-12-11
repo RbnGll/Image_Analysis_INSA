@@ -12,12 +12,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c08b6dc-3910-4be3-9ccc-565aa0bdbfc0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/clean.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/trainWrong.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Projet_OpenCV_CMake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Projet_OpenCV_CMake.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Projet_OpenCV_CMake.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/SquareExtractor.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/SquareExtractor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/matcher.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/matcher.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SquareExtractor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/SquareExtractor.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main_test_opencv.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_test_opencv.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/matcher.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/matcher.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,11 +41,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main_test_opencv.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="46" column="73" selection-start-line="46" selection-start-column="73" selection-end-line="46" selection-end-column="73" />
+            <state relative-caret-position="-170">
+              <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
               <folding>
                 <element signature="e#318#337#0" expanded="true" />
-                <element signature="e#601#620#0" expanded="true" />
+                <element signature="e#521#540#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -48,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/matcher.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-180">
-              <caret line="57" column="14" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
+            <state relative-caret-position="610">
+              <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
               <folding>
                 <element signature="e#42#74#0" expanded="true" />
               </folding>
@@ -60,26 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/matcher.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cross_detector.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/cross_detector.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+            <state relative-caret-position="345">
+              <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -87,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SquareExtractor.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="64" column="82" selection-start-line="64" selection-start-column="82" selection-end-line="64" selection-end-column="82" />
+            <state relative-caret-position="600">
+              <caret line="82" selection-start-line="82" selection-end-line="82" />
               <folding>
                 <element signature="e#41#72#0" expanded="true" />
               </folding>
@@ -99,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/SquareExtractor.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="150">
+              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -110,6 +98,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>ratio_thr</find>
+      <find>++k</find>
+      <find>k</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -125,11 +115,12 @@
         <option value="$PROJECT_DIR$/include/sift.h" />
         <option value="$PROJECT_DIR$/src/sift.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/include/matcher.h" />
-        <option value="$PROJECT_DIR$/src/matcher.cpp" />
         <option value="$PROJECT_DIR$/include/SquareExtractor.h" />
-        <option value="$PROJECT_DIR$/src/main_test_opencv.cpp" />
         <option value="$PROJECT_DIR$/src/SquareExtractor.cpp" />
+        <option value="$PROJECT_DIR$/include/matcher.h" />
+        <option value="$PROJECT_DIR$/src/clean.sh" />
+        <option value="$PROJECT_DIR$/src/matcher.cpp" />
+        <option value="$PROJECT_DIR$/src/main_test_opencv.cpp" />
       </list>
     </option>
   </component>
@@ -152,6 +143,17 @@
             <path>
               <item name="Projet_OpenCV_CMake" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projet OpenCV-CMake" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Projet_OpenCV_CMake" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projet OpenCV-CMake" type="462c0819:PsiDirectoryNode" />
+              <item name="ImageResult" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Projet_OpenCV_CMake" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projet OpenCV-CMake" type="462c0819:PsiDirectoryNode" />
+              <item name="ImageResult" type="462c0819:PsiDirectoryNode" />
+              <item name="Unclassified" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Projet_OpenCV_CMake" type="b2602c69:ProjectViewProjectNode" />
@@ -202,12 +204,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="CMake Application.Projet_OpenCV_CMake">
+    <configuration name="clean.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
+      <module name="Projet OpenCV-CMake" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="PROJECT_INTERPRETER" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/clean.sh" />
+      <option name="PARAMETERS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Projet_OpenCV_CMake" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Projet_OpenCV_CMake" TARGET_NAME="Projet_OpenCV_CMake" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Projet_OpenCV_CMake" RUN_TARGET_NAME="Projet_OpenCV_CMake">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Bash.clean.sh" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -234,7 +252,10 @@
       <workItem from="1576001045241" duration="248000" />
       <workItem from="1576047635507" duration="3308000" />
       <workItem from="1576051003352" duration="6848000" />
-      <workItem from="1576058113084" duration="2607000" />
+      <workItem from="1576058113084" duration="6474000" />
+      <workItem from="1576083187687" duration="595000" />
+      <workItem from="1576083797533" duration="1020000" />
+      <workItem from="1576087344354" duration="4747000" />
     </task>
     <task id="LOCAL-00001" summary="Add SquareExtractor">
       <created>1575462792123</created>
@@ -299,31 +320,37 @@
       <option name="project" value="LOCAL" />
       <updated>1576057319067</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Auto traverse database">
+      <created>1576060753406</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1576060753406</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43619000" />
+    <option name="totallyTimeSpent" value="53848000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-4" width="1920" height="1021" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1" y="-11" width="1922" height="1029" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992722" visible="true" weight="0.20064034" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992722" visible="true" weight="0.20704375" />
       <window_info id="Structure" order="1" sideWeight="0.5007278" side_tool="true" weight="0.20500873" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.30827886" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.61953044" visible="true" weight="0.24618736" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4855923" weight="0.33877996" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6093917" weight="0.24618736" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.47225186" weight="0.33877996" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.4279616" weight="0.32570806" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.40394878" weight="0.32570806" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49839914" weight="0.32897604" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.3804696" side_tool="true" visible="true" weight="0.24618736" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.58217716" weight="0.2767857" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.36712915" side_tool="true" visible="true" weight="0.2788671" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="11" sideWeight="0.63287085" visible="true" weight="0.2788671" />
       <window_info anchor="bottom" id="CMake" order="12" sideWeight="0.49893278" weight="0.3278867" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -383,24 +410,16 @@
     <MESSAGE value="Get all files in main to launch extract" />
     <MESSAGE value="Extract printed icons in image" />
     <MESSAGE value="Add txt generator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add txt generator" />
+    <MESSAGE value="Auto traverse database" />
+    <MESSAGE value="Finish text file and classification" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish text file and classification" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/matcher.cpp</url>
-          <line>21</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/cross_detector.cpp</url>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/SquareExtractor.cpp</url>
-          <line>12</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -527,13 +546,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Images/query.png" />
     <entry file="file://$PROJECT_DIR$/Images/trainWrong.png" />
-    <entry file="file://$PROJECT_DIR$/include/matcher.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/cross_detector.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -548,40 +560,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/SquareExtractor.h">
+    <entry file="file://$PROJECT_DIR$/src/clean.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="315">
+          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/matcher.cpp">
+    <entry file="file://$PROJECT_DIR$/include/SquareExtractor.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180">
-          <caret line="57" column="14" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
-          <folding>
-            <element signature="e#42#74#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="150">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/matcher.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SquareExtractor.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="64" column="82" selection-start-line="64" selection-start-column="82" selection-end-line="64" selection-end-column="82" />
+        <state relative-caret-position="600">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
           <folding>
             <element signature="e#41#72#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/matcher.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="610">
+          <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
+          <folding>
+            <element signature="e#42#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main_test_opencv.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="46" column="73" selection-start-line="46" selection-start-column="73" selection-end-line="46" selection-end-column="73" />
+        <state relative-caret-position="-170">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
           <folding>
             <element signature="e#318#337#0" expanded="true" />
-            <element signature="e#601#620#0" expanded="true" />
+            <element signature="e#521#540#0" expanded="true" />
           </folding>
         </state>
       </provider>

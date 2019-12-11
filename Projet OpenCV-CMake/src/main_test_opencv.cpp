@@ -30,43 +30,51 @@ using namespace cv;
 int main () {
     string basePath = "/home-info/commun/p/p12/5info/irfBD/NicIcon/";
     Matcher matcher;
-
-    for (int k = 0; k < 35; ++k) {
-        for (int i = 0; i < 23; ++i) {
+    /* k: number of scriptor*/
+    for (int k = 0; k < 3 /*35*/; ++k) {
+        /* i: number of page*/
+        for (int i = 0; i < 23/*23*/; ++i) {
             string imagePath = basePath + "w0" + (k < 10 ? "0" + to_string(k) : to_string(k)) + "-scans/";
             string imageName = "0" + (k < 10 ? "0" + to_string(k) : to_string(k)) +
                     (i < 10 ? "0" + to_string(i) : to_string(i));
             cout << imagePath + imageName << endl;
-            extract(imagePath, imageName, 2201, 468, 257, 3232);
-        }  
+            std::vector<cv::Mat> extractedVec = extract(imagePath, imageName, 2201, 468, 257, 3232);
+            cout << "Size: " << extractedVec.size() << endl;
+            int _i = 0;
+            for(const auto& _im: extractedVec) {
+                string p = "../ImageResult/Unclassified/0" + (k < 10 ? "0" + to_string(k) : to_string(k))
+                        + "/"+ to_string(i) + "-" +to_string(_i++) + ".png";
+                imwrite(p, _im);
+            }
+            /* number of icon */
+            
+            for (int j = 0; j < 7; ++j) {
+                cv::Mat img = extractedVec[i];
+                string maxCls = matcher.classifyImage(img);
+                /* number of handwritten image */
+                for (int l = 7 + j * 5; l <  7 + (j + 1) * 5; l++) {
+                    cout << "l=" << to_string(l) << endl;
+                    cv::Mat _img = extractedVec[l];
+                    string name = maxCls + "_0" + (k < 10 ? "0" + to_string(k) : to_string(k)) + "_" +
+                            (i < 10 ? "0" + to_string(i) : to_string(i)) + "_" + to_string(j) +
+                            to_string((l - 7) % 5);
+                    cout << "Generate " << name << endl;
+                    imwrite("../ImageResult/" + maxCls + "/" + name + ".png", _img);
+//                    // Write the txt file
+                    std::ofstream out("../ImageResult/" + maxCls + "/" + name + ".txt");
+                    out << "label " << maxCls << endl;
+                    out << "form 0" << (k < 10 ? "0" + to_string(k) : to_string(k)) <<
+                        (i < 10 ? "0" + to_string(i) : to_string(i)) << endl;
+                    out << "scripter 0" << (k < 10 ? "0" + to_string(k) : to_string(k)) << endl;
+                    out << "page" << (i < 10 ? "0" + to_string(i) : to_string(i)) << endl;
+                    out << "row " << i << endl;
+                    out << "column " << (l - 7) % 5 << endl;
+                    out << "size medium" << endl;
+                    out.close();
+                }
+            }
+        }
     }
-    for (int i = 0; i < 35; ++i) {
-//        matcher.classifyImage("../ImageResult/Square" + to_string(i) + ".png");
-    }
-
-//    std::cout << "Not a match: " << surfTest("../Images/query.png", "../Images/trainWrong.png") << endl;
-//    extract("../Images/00000.png", 2145, 548, 294, 3162);
-//    for (int i = 0; i < 7; ++i) {
-//        string maxCls = matcher.classifyImage("../ImageResult", "Icon" + to_string(i) + ".png");
-//        cout << "Match result: " << "../ImageResult/" << "Icon" + to_string(i) + ".png" << "  ---  " <<
-//            maxCls << endl << endl;
-//        for (int j = i * 5; j <  (i + 1) * 5; j++) {
-//            cv::Mat _img = cv::imread("../ImageResult/Square" + to_string(j) + ".png");
-//            imwrite("../ImageResult/" + maxCls + "/Square" + to_string(j) + ".png", _img);
-//
-//            // Write the txt file
-//
-//            std::ofstream out("../ImageResult/" + maxCls + "/Square" + to_string(j) + ".txt");
-//            out << "label " << maxCls << endl;
-//            out << "row " << i << endl;
-//            out << "column" << j % 5 << endl;
-//            out.close();
-//        }
-//    }
-
-//    extract("/home-info/commun/p/p12/5info/irfBD/NicIcon/all-scans/02202.png", 2201, 468, 257, 3232);
-//    extract("/home-info/commun/p/p12/5info/irfBD/NicIcon/all-scans/02601.png", 2205, 470, 263, 3232);
-
 	waitKey(0);
 	return EXIT_SUCCESS;
 }
