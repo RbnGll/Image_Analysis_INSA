@@ -22,6 +22,9 @@ using namespace cv;
 #include <iostream>
 #include <fstream>
 #include "histogram.hpp"
+#include "reformat_image.h"
+
+
 
 
 int main () {

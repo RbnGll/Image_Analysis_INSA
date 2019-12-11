@@ -258,6 +258,33 @@ src/matcher.cpp.s:
 	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/matcher.cpp.s
 .PHONY : src/matcher.cpp.s
 
+src/reformat_image.o: src/reformat_image.cpp.o
+
+.PHONY : src/reformat_image.o
+
+# target to build an object file
+src/reformat_image.cpp.o:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/reformat_image.cpp.o
+.PHONY : src/reformat_image.cpp.o
+
+src/reformat_image.i: src/reformat_image.cpp.i
+
+.PHONY : src/reformat_image.i
+
+# target to preprocess a source file
+src/reformat_image.cpp.i:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/reformat_image.cpp.i
+.PHONY : src/reformat_image.cpp.i
+
+src/reformat_image.s: src/reformat_image.cpp.s
+
+.PHONY : src/reformat_image.s
+
+# target to generate assembly for a file
+src/reformat_image.cpp.s:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/reformat_image.cpp.s
+.PHONY : src/reformat_image.cpp.s
+
 src/thresholding.o: src/thresholding.cpp.o
 
 .PHONY : src/thresholding.o
@@ -309,6 +336,9 @@ help:
 	@echo "... src/matcher.o"
 	@echo "... src/matcher.i"
 	@echo "... src/matcher.s"
+	@echo "... src/reformat_image.o"
+	@echo "... src/reformat_image.i"
+	@echo "... src/reformat_image.s"
 	@echo "... src/thresholding.o"
 	@echo "... src/thresholding.i"
 	@echo "... src/thresholding.s"
