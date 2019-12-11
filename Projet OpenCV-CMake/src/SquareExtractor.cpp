@@ -21,7 +21,8 @@ void extract(std::string path, int ur_X, int ur_Y, int ll_X, int ll_Y) {
 
     const int WINDOW_X = 220.0 * scaleX;
     const int WINDOW_Y = 220.0 * scaleY;
-
+    
+    int icon_offset = 0 - 35;
     int xOffsets[5] = {330, 666, 988, 1320, 1660};
     int yOffsets[7] = {228, 554, 883, 1220, 1544, 1875, 2205};
 
@@ -31,8 +32,10 @@ void extract(std::string path, int ur_X, int ur_Y, int ll_X, int ll_Y) {
     //        cv::imshow("input", input);
 //            cv::imshow("croped", croppedImage);
     std::vector<cv::Mat> resVec;
-    for (int i = 0; i < 5; ++i) {
-        for (int j = 0; j < 7; ++j) {
+    std::vector<cv::Mat> iconVec;
+    // Generate vector of handwritten images
+    for (int j = 0; j < 7; ++j) {
+        for (int i = 0; i < 5; ++i) {
             int squareX = ll_X + (xOffsets[i]) * scaleX;
             int squareY = ur_Y + (yOffsets[j]) * scaleY;
             cv::Mat firstSquare = getSquare(input,
@@ -47,23 +50,34 @@ void extract(std::string path, int ur_X, int ur_Y, int ll_X, int ll_Y) {
         }
     }
 
+    // Generate vector of icon images
+    for (int j = 0; j < 7; ++j) {
+        int squareX = ll_X + (icon_offset) * scaleX;
+        int squareY = ur_Y + (yOffsets[j]) * scaleY;
+        cv::Mat firstSquare = getSquare(input,
+                                        squareX,
+                                        squareY,
+                                        WINDOW_X,
+                                        WINDOW_Y);
+        //            cv::imshow("Square" + std::to_string(i)+", " + std::to_string(j)+" : ", firstSquare);
+//        imwrite("../ImageResult/Square " + std::to_string(i)+" " + std::to_string(j)+" - "+
+//        std::to_string(squareX)+"-"+std::to_string(squareY)+"-"+std::to_string(int(WINDOW_X))+"-"+std::to_string(int(WINDOW_Y))+".png ", firstSquare);
+        iconVec.push_back(firstSquare);
+    }
+
+
+    // Produce extracted handwritten images
     for (int k = 0; k < resVec.size(); ++k) {
         cv::Mat _img = resVec[k];
-        for (int i = 0; i < _img.rows; ++i) {
-            for (int j = 0; j < _img.cols; ++j) {
-                Vec3b color = _img.at<cv::Vec3b>(j, i);
-                if(color[0] <150 && color[1] <150 && color[2] <150) {
-                    _img.at<Vec3b>(Point(j, i)) = Vec3b(255, 255, 255);
-                    std::cout << "Set to white" << std::endl;
-                } else {
-                    if(_img.at<Vec3b>(Point(j, i))[0]!=255&&_img.at<Vec3b>(Point(j, i))[1]!=255&&_img.at<Vec3b>(Point(j, i))[2]!=255)
-                        std::cout << "Not black: " << _img.at<Vec3b>(Point(j, i)) << std::endl;
-                }
-            }
-        }
+
         imwrite("../ImageResult/Square" + std::to_string(k) + ".png", _img);
     }
 
+    // Produce detected icons
+    for (int k = 0; k < iconVec.size(); ++k) {
+        cv::Mat _img = iconVec[k];
+        imwrite("../ImageResult/Icon" + std::to_string(k) + ".png", _img);
+    }
 }
 
 cv::Mat getSquare(cv::Mat src, int x, int y, int disX, int disY) {
