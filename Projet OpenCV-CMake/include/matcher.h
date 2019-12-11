@@ -17,13 +17,15 @@ void performSift();
 class Matcher {
 private:
     static float DEFAULT_RATIO;
+    static int DEFAULT_HESS;
 
     float ratio_thresh;
+    int hess;
     int surf(std::string ref, std::string qry);
 
 public:
-    Matcher(float ratio) : ratio_thresh(ratio) {};
-    Matcher() : Matcher(DEFAULT_RATIO) {};
+    Matcher(float ratio, int hessMin) : ratio_thresh(ratio), hess(hessMin) {};
+    Matcher() : Matcher(DEFAULT_RATIO, DEFAULT_HESS) {};
     void classifyImage(const string& path);
 };
 

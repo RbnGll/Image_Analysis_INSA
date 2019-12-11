@@ -15,13 +15,14 @@ using namespace cv;
 using namespace cv::xfeatures2d;
 
 float Matcher::DEFAULT_RATIO = 0.9f;
+int Matcher::DEFAULT_HESS = 500;
 
 
 int Matcher::surf(std::string ref, std::string qry) {
     Mat img1 = imread(ref, 0);    // Load as gray scale
     Mat img2= imread(qry, 0);    // Load as gray scale
 
-    int minHessian = 400;
+    int minHessian = hess;
     Ptr<SURF> detector = SURF::create( minHessian );
     std::vector<KeyPoint> keypoints1, keypoints2;
     Mat descriptors1, descriptors2;
@@ -47,7 +48,7 @@ int Matcher::surf(std::string ref, std::string qry) {
     drawMatches( img1, keypoints1, img2, keypoints2, good_matches, img_matches, Scalar::all(-1),
                  Scalar::all(-1), std::vector<char>(), DrawMatchesFlags::NOT_DRAW_SINGLE_POINTS );
     //-- Show detected matches
-    imshow("Good Matches", img_matches );
+//    imshow("Good Matches", img_matches );
 
     return good_matches.size();
 }
