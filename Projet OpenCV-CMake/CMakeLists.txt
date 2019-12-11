@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 14)
 find_package(OpenCV REQUIRED)
 
 include_directories(include ${OpenCV_INCLUDE_DIRS})
-
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 
 add_executable(Projet_OpenCV_CMake
         include/histogram.hpp
