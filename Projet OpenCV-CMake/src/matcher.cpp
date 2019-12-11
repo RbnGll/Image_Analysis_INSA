@@ -53,7 +53,7 @@ int Matcher::surf(std::string ref, std::string qry) {
     return good_matches.size();
 }
 
-void Matcher::classifyImage(const string& path) {
+string Matcher::classifyImage(const string& path) {
     map<string, int> matches;
     string classNames[] = {"accident", "car", "electricity", "fire", "gas", "paramedics", "police", "bomb", "casualty",
      "firebrigade", "flood", "injury", "person", "roadblock"};
@@ -75,6 +75,7 @@ void Matcher::classifyImage(const string& path) {
     cout << "Best match: " << maxMatch << " " << maxCls << " matches" << endl;
     cv::Mat _img = cv::imread(path);
     imwrite("../ImageResult/" + maxCls + "/" + path.substr(14, path.size()), _img);
+    return maxCls;
 }
 
 

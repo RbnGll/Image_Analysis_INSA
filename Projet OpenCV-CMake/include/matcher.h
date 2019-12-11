@@ -26,7 +26,7 @@ private:
 public:
     Matcher(float ratio, int hessMin) : ratio_thresh(ratio), hess(hessMin) {};
     Matcher() : Matcher(DEFAULT_RATIO, DEFAULT_HESS) {};
-    void classifyImage(const string& path);
+    string classifyImage(const string& path);
 };
 
 
