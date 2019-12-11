@@ -22,9 +22,6 @@ void extract(std::string path, int ur_X, int ur_Y, int ll_X, int ll_Y) {
     const int WINDOW_X = 220.0 * scaleX;
     const int WINDOW_Y = 220.0 * scaleY;
 
-    int ur_X_scaled, ur_Y_scaled, ll_X_scaled, ll_Y_scaled;
-
-
     int xOffsets[5] = {330, 666, 988, 1320, 1660};
     int yOffsets[7] = {228, 554, 883, 1220, 1544, 1875, 2205};
 

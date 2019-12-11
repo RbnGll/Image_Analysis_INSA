@@ -14,8 +14,8 @@ using namespace std;
 using namespace cv;
 using namespace cv::xfeatures2d;
 
-float Matcher::DEFAULT_RATIO = 0.9f;
-int Matcher::DEFAULT_HESS = 500;
+float Matcher::DEFAULT_RATIO = 0.8f;
+int Matcher::DEFAULT_HESS = 400;
 
 
 int Matcher::surf(std::string ref, std::string qry) {
@@ -72,7 +72,7 @@ void Matcher::classifyImage(const string& path) {
             maxMatch = itr->second;
         }
     }
-    cout << "Best match: " << maxMatch << " " << maxCls << "matches" << endl;
+    cout << "Best match: " << maxMatch << " " << maxCls << " matches" << endl;
     cv::Mat _img = cv::imread(path);
     imwrite("../ImageResult/" + maxCls + "/" + path.substr(14, path.size()), _img);
 }
