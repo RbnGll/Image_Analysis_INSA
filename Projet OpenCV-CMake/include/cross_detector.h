@@ -10,7 +10,11 @@
 using namespace std;
 using namespace cv;
 
-Point searchCrossCenter (Mat src);
+
+
+
+Point searchCrossCenter (const Mat& src, bool top);
+tuple<Point, Point> searchCross(const Mat& src);
 
 
 #endif //PROJET_OPENCV_CMAKE_CROSS_DETECTOR_H
