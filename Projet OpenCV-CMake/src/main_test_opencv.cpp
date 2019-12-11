@@ -43,7 +43,7 @@ int main () {
 //    }
 
 //    std::cout << "Not a match: " << surfTest("../Images/query.png", "../Images/trainWrong.png") << endl;
-    extract("../Images/00000.png", 2145, 548, 294, 3162);
+/*   extract("../Images/00000.png", 2145, 548, 294, 3162);
     for (int i = 0; i < 7; ++i) {
         string maxCls = matcher.classifyImage("../ImageResult", "Icon" + to_string(i) + ".png");
         cout << "Match result: " << "../ImageResult/" << "Icon" + to_string(i) + ".png" << "  ---  " <<
@@ -61,9 +61,20 @@ int main () {
             out.close();
         }
     }
-
+*/
 //    extract("/home-info/commun/p/p12/5info/irfBD/NicIcon/all-scans/02202.png", 2201, 468, 257, 3232);
 //    extract("/home-info/commun/p/p12/5info/irfBD/NicIcon/all-scans/02601.png", 2205, 470, 263, 3232);
+
+    Mat src,dst,red_dst;
+    src=imread("../Images/Rotation\ test/00715.png");
+    dst=src.clone();
+    Point2f pc(src.cols/2.,src.rows/2.);
+    double angle = compute_rotation_angle(Point(187,3208),Point(2192,118));
+    rotate_image(src,dst,pc,angle);
+    imwrite("src.png",src);
+    imwrite("test.png",dst);
+
+    
 
 	waitKey(0);
 	return EXIT_SUCCESS;

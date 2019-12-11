@@ -6,8 +6,12 @@
 #define PROJET_OPENCV_CMAKE_REFORMAT_IMAGE_H
 
 #include <iostream>
+#include <math.h>
 #include "opencv2/imgproc.hpp"
 #include "opencv2/highgui.hpp"
+#define PI 3.14159265
+#define HEIGHT 2650.0
+#define WIDTH 2200.0
 using namespace std;
 using namespace cv;
 
