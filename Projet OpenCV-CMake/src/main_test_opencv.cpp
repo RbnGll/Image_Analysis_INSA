@@ -19,16 +19,34 @@ using namespace std;
 using namespace cv;
 
 #include "histogram.hpp"
+#include "reformat_image.h"
+
+
 
 
 int main (void) {
 //	computeHistogram("histogramme", im);
 //	calc_threshold("threshold", im);
 //    performSift();
-    Matcher matcher;
+    /*Matcher matcher;
     for (int i = 0; i < 35; ++i) {
         matcher.classifyImage("../ImageResult/Square" + to_string(i) + ".png");
-    }
+    }*/
+    Mat src, dst, dst_reduite;
+    src=imread("../Images/00000.png");
+
+    dst=src.clone();
+    Point2f pc(src.cols/2., src.rows/2.);
+    rotate_image(src,dst,pc,);
+    int factor=5;
+    Size tailleReduite(dst.cols/factor, dst.rows/factor);
+    dst_reduite = Mat(tailleReduite,CV_8UC3);
+    resize(dst,dst_reduite, tailleReduite);
+    imshow("Reduite",dst_reduite);
+
+    Mat test, dest_test;
+
+
 
 //    std::cout << "Not a match: " << surfTest("../Images/query.png", "../Images/trainWrong.png") << endl;
 

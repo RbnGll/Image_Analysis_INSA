@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/src/histogram.cpp" "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.o"
   "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/src/main_test_opencv.cpp" "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o"
   "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/src/matcher.cpp" "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/src/matcher.cpp.o"
+  "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/src/reformat_image.cpp" "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/src/reformat_image.cpp.o"
   "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/src/thresholding.cpp" "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles/Projet_OpenCV_CMake.dir/src/thresholding.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

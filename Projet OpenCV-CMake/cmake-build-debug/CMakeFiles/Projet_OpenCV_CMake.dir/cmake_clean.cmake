@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Projet_OpenCV_CMake.dir/src/matcher.cpp.o"
   "CMakeFiles/Projet_OpenCV_CMake.dir/src/SquareExtractor.cpp.o"
   "CMakeFiles/Projet_OpenCV_CMake.dir/src/cross_detector.cpp.o"
+  "CMakeFiles/Projet_OpenCV_CMake.dir/src/reformat_image.cpp.o"
   "Projet_OpenCV_CMake.pdb"
   "Projet_OpenCV_CMake"
 )

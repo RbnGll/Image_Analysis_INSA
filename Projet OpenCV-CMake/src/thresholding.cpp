@@ -4,6 +4,8 @@
 
 #include <opencv2/highgui.hpp>
 #include "thresholding.h"
+#define IMAGE_HEIGHT
+#define IMAGE WIDTH
 
 
 void calc_threshold(const string& histTitle,const Mat& img) {

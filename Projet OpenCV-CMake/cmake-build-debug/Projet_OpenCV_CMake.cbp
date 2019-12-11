@@ -118,6 +118,12 @@
 		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/src/matcher.cpp">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
+		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/src/reformat_image.cpp">
+			<Option target="Projet_OpenCV_CMake"/>
+		</Unit>
+		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/src/reformat_image.h">
+			<Option target="Projet_OpenCV_CMake"/>
+		</Unit>
 		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/src/thresholding.cpp">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
