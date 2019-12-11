@@ -1,4 +1,4 @@
-/usr/share/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake"
+/usr/share/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake"
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug
+-- Build files have been written to: /home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/cmake-build-debug

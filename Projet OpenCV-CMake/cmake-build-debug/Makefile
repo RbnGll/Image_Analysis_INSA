@@ -48,10 +48,10 @@ RM = /usr/share/clion/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake"
+CMAKE_SOURCE_DIR = "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug"
+CMAKE_BINARY_DIR = "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home-reseau/xizheng/TP/Image/Project/CMake Project/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -149,6 +149,33 @@ src/SquareExtractor.s: src/SquareExtractor.cpp.s
 src/SquareExtractor.cpp.s:
 	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/SquareExtractor.cpp.s
 .PHONY : src/SquareExtractor.cpp.s
+
+src/cross_detector.o: src/cross_detector.cpp.o
+
+.PHONY : src/cross_detector.o
+
+# target to build an object file
+src/cross_detector.cpp.o:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/cross_detector.cpp.o
+.PHONY : src/cross_detector.cpp.o
+
+src/cross_detector.i: src/cross_detector.cpp.i
+
+.PHONY : src/cross_detector.i
+
+# target to preprocess a source file
+src/cross_detector.cpp.i:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/cross_detector.cpp.i
+.PHONY : src/cross_detector.cpp.i
+
+src/cross_detector.s: src/cross_detector.cpp.s
+
+.PHONY : src/cross_detector.s
+
+# target to generate assembly for a file
+src/cross_detector.cpp.s:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/cross_detector.cpp.s
+.PHONY : src/cross_detector.cpp.s
 
 src/histogram.o: src/histogram.cpp.o
 
@@ -270,6 +297,9 @@ help:
 	@echo "... src/SquareExtractor.o"
 	@echo "... src/SquareExtractor.i"
 	@echo "... src/SquareExtractor.s"
+	@echo "... src/cross_detector.o"
+	@echo "... src/cross_detector.i"
+	@echo "... src/cross_detector.s"
 	@echo "... src/histogram.o"
 	@echo "... src/histogram.i"
 	@echo "... src/histogram.s"
