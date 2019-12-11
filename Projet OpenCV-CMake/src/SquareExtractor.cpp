@@ -34,8 +34,8 @@ void extract(std::string path, int ur_X, int ur_Y, int ll_X, int ll_Y) {
     std::vector<cv::Mat> resVec;
     std::vector<cv::Mat> iconVec;
     // Generate vector of handwritten images
-    for (int i = 0; i < 5; ++i) {
-        for (int j = 0; j < 7; ++j) {
+    for (int j = 0; j < 7; ++j) {
+        for (int i = 0; i < 5; ++i) {
             int squareX = ll_X + (xOffsets[i]) * scaleX;
             int squareY = ur_Y + (yOffsets[j]) * scaleY;
             cv::Mat firstSquare = getSquare(input,
