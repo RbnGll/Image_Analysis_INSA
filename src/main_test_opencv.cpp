@@ -23,7 +23,7 @@ using namespace cv;
 #include <fstream>
 #include "histogram.hpp"
 #include "reformat_image.h"
-
+#include "SizeDetector.h"
 
 
 void generateUnclassifiedIcons() {
@@ -48,13 +48,13 @@ void generateUnclassifiedIcons() {
     }
 }
 
-void classifyIcons(int ctr, float f, int i) {
+void classifyIcons( float f, int i) {
     Matcher matcher(f, i);
     std::ofstream out("../ImageResult/ClassifiedIcons/result.txt");
     for (int i = 0; i < 482/*5635*/; ++i) {
         cv::Mat img = imread("../ImageResult/UnclassifiedIcons/" + to_string(i) + ".png");
         string cls = matcher.classifyImage(img);
-        string name = "../ImageResult/ClassifiedIcons/" + to_string(ctr) + "/" + cls + "-" + to_string(i) + ".png";
+        string name = "../ImageResult/ClassifiedIcons/" + cls + "-" + to_string(i) + ".png";
         out << name << endl;
         cout << name << endl;
         imwrite(name, img);
@@ -62,34 +62,27 @@ void classifyIcons(int ctr, float f, int i) {
     out.close();
 }
 
-int main () {
-    system("/home-reseau/xizheng/TP/Image/image-analysis/src/clean.sh");
+void testSizeDetector() {
+    SizeDetector detector;
+    cout << detector.detectSize("../ImageResult/ClassifiedIcons/accident-0.png") << endl;
+    cout << detector.detectSize("../ImageResult/ClassifiedIcons/bomb-239.png") << endl;
+    cout << detector.detectSize("../ImageResult/ClassifiedIcons/accident-85.png") << endl;
+    cout << detector.detectSize("../ImageResult/ClassifiedIcons/accident-71.png") << endl;
+}
+
+void testClassifyIcon() {
     generateUnclassifiedIcons();
-    int ctr = 0;
-    for (int m = 0; m < 60; m++) {
-        for (int i = 200; i < 600; i += 20) {
-            string thePath = "mkdir ../ImageResult/ClassifiedIcons/" + to_string(ctr);
-            char *cstr = new char[thePath.length() + 1];
-            strcpy(cstr, thePath.c_str());
-            system(cstr);
-            classifyIcons(ctr, 0.4f + 0.02f * m, i);
-            ctr++;
-        }
-    }
+    classifyIcons(0.7f, 400);
+}
 
-    return 0;
-
-
-
-
-
-
-
-
-
-
+int main () {
+//    system("/home-reseau/xizheng/TP/Image/image-analysis/src/clean.sh");
+//    testClassifyIcon();
+//    testSizeDetector();
     string basePath = "/home-info/commun/p/p12/5info/irfBD/NicIcon/";
     Matcher matcher;
+    SizeDetector detector;
+
     /* k: number of scriptor*/
     for (int k = 0; k < 3 /*35*/; ++k) {
         /* i: number of page*/
@@ -101,17 +94,19 @@ int main () {
             cout << "\t\t" << to_string(k * 22 + i) << "/" << to_string(35 * 22) <<
             "files\t\t\t" <<  (k * 22 + i) * 100 / (35 * 22) << "% completed " << endl;
             std::vector<cv::Mat> extractedVec = extract(imagePath, imageName, 2201, 468, 257, 3232);
-            int _i = 0;
-            for(int z = 0; z < 7; z++) {
-                string p = "../ImageResult/Unclassified/0" + (k < 10 ? "0" + to_string(k) : to_string(k))
-                           + "/"+ to_string(i) + "-" +to_string(_i++) + ".png";
-                imwrite(p, extractedVec[z]);
-            }
+//            int _i = 0;
+//            for(int z = 0; z < 7; z++) {
+//                string p = "../ImageResult/Unclassified/0" + (k < 10 ? "0" + to_string(k) : to_string(k))
+//                           + "/"+ to_string(i) + "-" +to_string(_i++) + ".png";
+//                imwrite(p, extractedVec[z]);
+//            }
             /* number of icon */
-            
             for (int j = 0; j < 7; ++j) {
-                cv::Mat img = extractedVec[i];
+                cv::Mat img = extractedVec[j];
                 string maxCls = matcher.classifyImage(img);
+                string sz = detector.detectSizeStr(img);
+                imwrite("../ImageResult/ClassifiedIcons/" + maxCls + "-" + to_string(k) + "-" + to_string(i) + "-" +
+                    to_string(j) + ".png", img);
                 /* number of handwritten image */
                 for (int l = 7 + j * 5; l <  7 + (j + 1) * 5; l++) {
                     cv::Mat _img = extractedVec[l];
@@ -129,7 +124,7 @@ int main () {
                     out << "page" << (i < 10 ? "0" + to_string(i) : to_string(i)) << endl;
                     out << "row " << i << endl;
                     out << "column " << (l - 7) % 5 << endl;
-                    out << "size " << to_string(_img.cols) << " * " << to_string(_img.rows) << endl;
+                    out << "size " << sz << endl;
                     out.close();
                 }
             }

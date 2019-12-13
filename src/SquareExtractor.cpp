@@ -59,7 +59,7 @@ std::vector<cv::Mat> extract(std::string basePath, std::string name, int ur_X, i
                                         squareX,
                                         squareY,
                                         WINDOW_X,
-                                        WINDOW_Y);
+                                        WINDOW_Y + 100);
         //            cv::imshow("Square" + std::to_string(i)+", " + std::to_string(j)+" : ", firstSquare);
 //        imwrite("../ImageResult/Square " + std::to_string(i)+" " + std::to_string(j)+" - "+
 //        std::to_string(squareX)+"-"+std::to_string(squareY)+"-"+std::to_string(int(WINDOW_X))+"-"+std::to_string(int(WINDOW_Y))+".png ", firstSquare);

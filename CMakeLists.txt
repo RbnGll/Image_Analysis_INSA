@@ -23,6 +23,6 @@ add_executable(Projet_OpenCV_CMake
         src/SquareExtractor.cpp
         include/SquareExtractor.h
         src/thresholding.cpp
-        include/thresholding.h)
+        include/thresholding.h src/SizeDetector.cpp src/SizeDetector.h)
 
 target_link_libraries(Projet_OpenCV_CMake ${OpenCV_LIBS})
