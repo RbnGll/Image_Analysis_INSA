@@ -21,12 +21,13 @@ private:
 
     float ratio_thresh;
     int hess;
-    int surf(cv::Mat mat, const std::string& qry);
 
 public:
     Matcher(float ratio, int hessMin) : ratio_thresh(ratio), hess(hessMin) {};
     Matcher() : Matcher(DEFAULT_RATIO, DEFAULT_HESS) {};
-    string classifyImage( cv::Mat img);
+    string classifyImage( const cv::Mat& img);
+    int surf(const cv::Mat& mat, const std::string& qry);
+    int surf(const cv::Mat& mat, const cv::Mat& img);
 };
 
 

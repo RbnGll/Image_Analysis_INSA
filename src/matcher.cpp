@@ -14,14 +14,14 @@ using namespace std;
 using namespace cv;
 using namespace cv::xfeatures2d;
 
-float Matcher::DEFAULT_RATIO = 0.8f;
-int Matcher::DEFAULT_HESS = 300;
+float Matcher::DEFAULT_RATIO = 0.7f;
+int Matcher::DEFAULT_HESS = 400;
 
 
-int Matcher::surf(cv::Mat mat, const std::string& qry) {
+int Matcher::surf(const cv::Mat& mat, const cv::Mat& img2) {
 //    Mat img1 = imread(ref + ".png", 0);    // Load as gray scale
-    Mat img1 = mat;
-    Mat img2= imread(qry, 0);    // Load as gray scale
+    const Mat& img1 = mat;
+//    Mat img2= imread(qry, 0);    // Load as gray scale
 
     int minHessian = hess;
     Ptr<SURF> detector = SURF::create( minHessian );
@@ -45,21 +45,22 @@ int Matcher::surf(cv::Mat mat, const std::string& qry) {
     }
 
     //-- Draw matches
-    Mat img_matches;
-    drawMatches( img1, keypoints1, img2, keypoints2, good_matches, img_matches, Scalar::all(-1),
-                 Scalar::all(-1), std::vector<char>(), DrawMatchesFlags::NOT_DRAW_SINGLE_POINTS );
+//    Mat img_matches;
+//    drawMatches( img1, keypoints1, img2, keypoints2, good_matches, img_matches, Scalar::all(-1),
+//                 Scalar::all(-1), std::vector<char>(), DrawMatchesFlags::NOT_DRAW_SINGLE_POINTS );
     //-- Show detected matches
 //    imshow("Good Matches", img_matches );
 
     return good_matches.size();
 }
 
-string Matcher::classifyImage(cv::Mat img) {
-    string classNames[] = {"accident", "car", "electricity", "fire", "gas", "paramedics", "police", "bomb", "casualty",
-     "firebrigade", "flood", "injury", "person", "roadblock"};
+string Matcher::classifyImage(const cv::Mat& img) {
+    string classNames[] = {"accident", "bomb", "car", "casualty", "electricity", "fire", "firebrigade", "flood", "gas",
+                           "injury", "paramedics", "police",
+                           "person", "roadblock"};
 
     map<string, int> matches;
-    for (int i = 0; i < classNames->length(); ++i) {
+    for (int i = 0; i < 14; ++i) {
         int _matches = surf(img, "../Images/Icons/"+ classNames[i] +".png");
         matches.insert(pair<string, int>(classNames[i], _matches));
     }
@@ -78,6 +79,11 @@ string Matcher::classifyImage(cv::Mat img) {
 //    cv::Mat _img = cv::imread(path);
 //    imwrite("../ImageResult/" + maxCls + "/" + path.substr(14, path.size()), _img);
     return maxCls;
+}
+
+int Matcher::surf(const cv::Mat &mat, const std::string &qry) {
+    const cv::Mat img = cv::imread(qry, 0);
+    return surf(mat, img);
 }
 
 
@@ -106,4 +112,8 @@ void performSift() {
 
     // Print how many keypoints were found in each image.
 //    printf("Found %d and %d keypoints.\n", queryKeypoints.size(), trainKeypoints.size());
+
+
+
+
 }
