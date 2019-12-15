@@ -11,7 +11,65 @@ using namespace std;
 
 #include "opencv2/imgproc.hpp"
 #include "opencv2/highgui.hpp"
+
 using namespace cv;
+
+#define CROSS_SIZE 100
+#define SIDE_LIMIT 50
+#define STEP 100
+
+//Do the average of the position of every coloured pixel around init after transforming it in a binary image with the threshold step
+Point recadrage(const Mat& src, Point init, bool cross = true, int step = STEP, int half_square_length = CROSS_SIZE) {
+
+    //Convert the src to a binary image
+    Mat gray, bw;
+    cvtColor(src, gray, COLOR_BGR2GRAY);
+    threshold(~gray, bw, step, 255, 0);
+
+    //Remove Noise
+    Mat block = getStructuringElement(MORPH_RECT, Size(2, 2));
+    erode(bw, bw, block);
+    dilate(bw, bw, block);
+
+
+    if (cross) {
+        // Evaluate the cross position
+        int count = 0;
+        for (int x = init.x - 5; x < init.x + 5; x++)if (bw.at<bool>(init.y, x)) count++;
+        for (int y = init.y - 5; y < init.y + 5; y++)if (bw.at<bool>(y, init.x)) count++;
+
+        if (count > 16) {
+            return init;
+        }
+    }
+
+    //Store the sum of the position of all blanck pixel in buffer_x and buffer_y
+    int limite_x = min(init.x + half_square_length, bw.cols - 1);
+    int limite_y = min(init.y + half_square_length, bw.rows - 1);
+    int buffer_x = 0; int buffer_y = 0;
+    int count = 0;
+    for (int x = max(init.x - CROSS_SIZE, 1); x <= limite_x && x > 0; x++) {
+        for (int y = max(init.y - CROSS_SIZE, 1); y <= limite_y && y > 0; y++) {
+            if (bw.at<bool>(y, x)) {
+                buffer_x += x;
+                buffer_y += y;
+                count++;
+            }
+        }
+    }
+
+    if (cross && count < 10) {
+        return init;
+    }
+
+    if (count == 0) return init;
+    //Compute the average position of all the black pixel
+    Point corrected = Point(buffer_x / count, buffer_y / count);
+    ~bw;
+    //Return the average position
+    return corrected;
+}
+
 
 Point searchCrossCenter(const Mat &src, const bool top) {
 
@@ -22,11 +80,11 @@ Point searchCrossCenter(const Mat &src, const bool top) {
     if (top) {
         xWindow = 2 * src.cols / 3;
         yWindow =  2 * src.rows / 7;
-        Window = Rect(xWindow, 0, src.cols - (xWindow), (yWindow));
+        Window = Rect(xWindow, SIDE_LIMIT, src.cols - (xWindow) - SIDE_LIMIT, (yWindow) - 2* SIDE_LIMIT);
     } else {
         xWindow = 1 * src.cols / 3;
         yWindow= 5 * src.rows /7;
-        Window = Rect(0, yWindow, xWindow, src.rows - yWindow);
+        Window = Rect(SIDE_LIMIT, yWindow, xWindow - 2* SIDE_LIMIT, src.rows - yWindow - 2* SIDE_LIMIT);
     }
     crossMat = src(Window);
     //Applying Canny threshold
@@ -41,8 +99,8 @@ Point searchCrossCenter(const Mat &src, const bool top) {
 
     //Lines drawing used to tune
     Mat color_dst=crossMat.clone();
-    for (int i = 0; i < lines.size(); i++){
-        line(color_dst, Point(lines[i][0], lines[i][1]), Point(lines[i][2], lines[i][3]), Scalar(0, 0, 255), 3, 8);
+    for (auto & i : lines){
+        line(color_dst, Point(i[0], i[1]), Point(i[2], i[3]), Scalar(0, 0, 255), 3, 8);
     }
     //imshow("lines", color_dst);
 
@@ -51,8 +109,8 @@ Point searchCrossCenter(const Mat &src, const bool top) {
         crossY = edgesImage.rows;
         crossX = edgesImage.cols;
     } else {
-        crossY = 0.f;
-        crossX = 0.f;
+        crossY = SIDE_LIMIT;
+        crossX = SIDE_LIMIT;
     }
 
     for (int i ; i<lines.size(); i++) {
@@ -71,12 +129,14 @@ Point searchCrossCenter(const Mat &src, const bool top) {
         crossY += yWindow;
     }
 
-
     return {(int)crossX, (int)crossY};
 }
 
 tuple<Point,Point> searchCross (const Mat& src) {
-    Point bottomCross = searchCrossCenter(src, false);
-    Point topCross = searchCrossCenter(src, true);
+    Point bottomCross = recadrage(src,searchCrossCenter(src, false));
+    Point topCross = recadrage(src,searchCrossCenter(src, true));
+
     return make_tuple(bottomCross,topCross);
 }
+
+
