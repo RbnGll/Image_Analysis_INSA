@@ -1,0 +1,8 @@
+<<<<<<< HEAD
+/usr/share/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/Projet OpenCV-CMake"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/Projet OpenCV-CMake/cmake-build-debug
+=======
+CMakeLists.txt not found in /home-reseau/xizheng/TP/Image/image-analysis/Projet OpenCV-CMake Select CMakeLists.txt file...
+>>>>>>> refs/remotes/origin/master
