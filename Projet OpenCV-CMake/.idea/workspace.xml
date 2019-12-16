@@ -12,10 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c08b6dc-3910-4be3-9ccc-565aa0bdbfc0" name="Default Changelist" comment="Add max match classifier">
-      <change afterPath="$PROJECT_DIR$/.idea/Projet_OpenCV_CMake.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cross_detector.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../include/cross_detector.h" beforeDir="false" afterPath="$PROJECT_DIR$/../include/cross_detector.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/cross_detector.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/cross_detector.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/main_test_opencv.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main_test_opencv.cpp" afterDir="false" />
@@ -36,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../src/main_test_opencv.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="113" column="13" selection-start-line="113" selection-start-column="13" selection-end-line="113" selection-end-column="13" />
+            <state relative-caret-position="360">
+              <caret line="99" column="79" selection-start-line="99" selection-start-column="79" selection-end-line="99" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -45,8 +41,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../src/cross_detector.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="60" column="26" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
+            <state relative-caret-position="480">
+              <caret line="135" column="30" selection-start-line="135" selection-start-column="30" selection-end-line="135" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../include/cross_detector.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -60,9 +65,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/cross_detector.cpp" />
+        <option value="$PROJECT_DIR$/../src/cross_detector.cpp" />
         <option value="$PROJECT_DIR$/../include/cross_detector.h" />
         <option value="$PROJECT_DIR$/../src/main_test_opencv.cpp" />
-        <option value="$PROJECT_DIR$/../src/cross_detector.cpp" />
       </list>
     </option>
   </component>
@@ -88,6 +93,11 @@
             <path>
               <item name="Projet_OpenCV_CMake" type="b2602c69:ProjectViewProjectNode" />
               <item name="image-analysis" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Projet_OpenCV_CMake" type="b2602c69:ProjectViewProjectNode" />
+              <item name="image-analysis" type="462c0819:PsiDirectoryNode" />
               <item name="Projet OpenCV-CMake" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -95,12 +105,6 @@
               <item name="image-analysis" type="462c0819:PsiDirectoryNode" />
               <item name="Projet OpenCV-CMake" type="462c0819:PsiDirectoryNode" />
               <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projet_OpenCV_CMake" type="b2602c69:ProjectViewProjectNode" />
-              <item name="image-analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="Projet OpenCV-CMake" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Projet_OpenCV_CMake" type="b2602c69:ProjectViewProjectNode" />
@@ -151,30 +155,30 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576507286405</updated>
-      <workItem from="1576507295237" duration="2351000" />
+      <workItem from="1576507295237" duration="3175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2463000" />
+    <option name="totallyTimeSpent" value="3287000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="60" y="-11" width="1861" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992722" visible="true" weight="0.20297849" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992722" visible="true" weight="0.20297849" />
       <window_info id="Structure" order="1" sideWeight="0.5007278" side_tool="true" weight="0.20500873" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4997236" weight="0.30784914" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6334045" visible="true" weight="0.27217126" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6334045" visible="true" weight="0.27217126" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48719317" weight="0.22629969" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.4434365" weight="0.32517838" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49893278" weight="0.3274244" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49893278" weight="0.32721713" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5008274" side_tool="true" weight="0.32721713" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.5875133" weight="0.36819172" />
       <window_info anchor="bottom" id="CMake" order="12" sideWeight="0.49917263" weight="0.32721713" />
@@ -217,13 +221,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../include/cross_detector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main_test_opencv.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -246,15 +243,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../src/main_test_opencv.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="113" column="13" selection-start-line="113" selection-start-column="13" selection-end-line="113" selection-end-column="13" />
+        <state relative-caret-position="360">
+          <caret line="99" column="79" selection-start-line="99" selection-start-column="79" selection-end-line="99" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../include/cross_detector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../src/cross_detector.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="60" column="26" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
+        <state relative-caret-position="480">
+          <caret line="135" column="30" selection-start-line="135" selection-start-column="30" selection-end-line="135" selection-end-column="30" />
         </state>
       </provider>
     </entry>
