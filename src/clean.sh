@@ -13,7 +13,7 @@ rm ../ImageResult/injury/*
 rm ../ImageResult/paramedics/*
 rm ../ImageResult/person/*
 rm ../ImageResult/police/*
-rm ../ImageResult/rodeblock/*
+rm ../ImageResult/roadblock/*
 #rm ../ImageResult/UnclassifiedIcons/*
 rm ../ImageResult/ClassifiedIcons/*
 for i in 0 1 2 3 4 5 6 7 8 9

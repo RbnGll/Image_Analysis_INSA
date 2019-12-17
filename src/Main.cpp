@@ -94,7 +94,7 @@ int main () {
             cout << "Parsing file: " << imagePath + imageName << endl;
             cout << "\t\t" << to_string(k * 22 + i) << "/" << to_string(35 * 22) <<
             "files\t\t\t" <<  (k * 22 + i) * 100 / (35 * 22) << "% completed " << endl;
-            tuple<Point,Point> crosses = searchCross(imagePath);
+            tuple<Point,Point> crosses = searchCross(imagePath+imageName+".png");
             Point bottomCross = get<0>(crosses);
             Point topCross = get<1>(crosses);
             //TODO Image trimming and modification of the new crosses coordinate
@@ -119,7 +119,7 @@ int main () {
                     string name = maxCls + "_0" + (k < 10 ? "0" + to_string(k) : to_string(k)) + "_" +
                             (i < 10 ? "0" + to_string(i) : to_string(i)) + "_" + to_string(j) +
                             to_string((l - 7) % 5);
-                    cout << "Generate " << name << endl;
+//                    cout << "Generate " << name << endl;
                     imwrite("../ImageResult/" + maxCls + "/" + name + ".png", _img);
                     // Write the txt file
                     std::ofstream out("../ImageResult/" + maxCls + "/" + name + ".txt");
