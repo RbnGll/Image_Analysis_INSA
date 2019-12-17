@@ -11,7 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b64e9390-f6e1-462b-b0fa-bbcdf16880d9" name="Default Changelist" comment="Tune classifier">
+    <list default="true" id="b64e9390-f6e1-462b-b0fa-bbcdf16880d9" name="Default Changelist" comment="Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/Projet OpenCV-CMake/cmake-build-debug/" />
@@ -91,8 +91,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main_test_opencv.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="124" column="47" selection-start-line="124" selection-start-column="47" selection-end-line="124" selection-end-column="47" />
+            <state relative-caret-position="333">
+              <caret line="98" column="50" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
               <folding>
                 <element signature="e#521#540#0" expanded="true" />
               </folding>
@@ -115,6 +115,7 @@
     </leaf>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -149,11 +150,6 @@
             <path>
               <item name="Projet_OpenCV_CMake" type="b2602c69:ProjectViewProjectNode" />
               <item name="image-analysis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projet_OpenCV_CMake" type="b2602c69:ProjectViewProjectNode" />
-              <item name="image-analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="generated" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Projet_OpenCV_CMake" type="b2602c69:ProjectViewProjectNode" />
@@ -218,7 +214,7 @@
       <workItem from="1576175861528" duration="5691000" />
       <workItem from="1576236454672" duration="5558000" />
       <workItem from="1576253400599" duration="4569000" />
-      <workItem from="1576579192668" duration="258000" />
+      <workItem from="1576579192668" duration="772000" />
     </task>
     <task id="LOCAL-00001" summary="Tune classifier">
       <created>1576181550169</created>
@@ -227,15 +223,21 @@
       <option name="project" value="LOCAL" />
       <updated>1576181550169</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit">
+      <created>1576579594426</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576579594426</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16682000" />
+    <option name="totallyTimeSpent" value="17196000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1918" height="993" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26602563" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -249,8 +251,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="9" sideWeight="0.5005342" side_tool="true" visible="true" weight="0.24719101" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49946582" visible="true" weight="0.24719101" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5005342" side_tool="true" visible="true" weight="0.24382022" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" sideWeight="0.49946582" visible="true" weight="0.24382022" />
       <window_info anchor="bottom" id="CMake" order="11" weight="0.3280899" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3148148" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -304,7 +306,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Tune classifier" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tune classifier" />
+    <MESSAGE value="Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/include/connected.h">
@@ -384,8 +387,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main_test_opencv.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="124" column="47" selection-start-line="124" selection-start-column="47" selection-end-line="124" selection-end-column="47" />
+        <state relative-caret-position="333">
+          <caret line="98" column="50" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
           <folding>
             <element signature="e#521#540#0" expanded="true" />
           </folding>
