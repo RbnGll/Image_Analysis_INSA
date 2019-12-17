@@ -11,7 +11,7 @@ include_directories(include ${OpenCV_INCLUDE_DIRS})
 add_executable(Projet_OpenCV_CMake
         include/histogram.hpp
         src/histogram.cpp
-        src/main_test_opencv.cpp
+        src/Main.cpp
         include/connected.h
         src/connected.cpp
         include/cross_detector.h
@@ -23,6 +23,8 @@ add_executable(Projet_OpenCV_CMake
         src/SquareExtractor.cpp
         include/SquareExtractor.h
         src/thresholding.cpp
-        include/thresholding.h src/SizeDetector.cpp src/SizeDetector.h)
+        include/thresholding.h
+        src/SizeDetector.cpp
+        src/SizeDetector.h)
 
 target_link_libraries(Projet_OpenCV_CMake ${OpenCV_LIBS})

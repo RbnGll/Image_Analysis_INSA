@@ -77,9 +77,9 @@ void testClassifyIcon() {
 }
 
 int main () {
-    system("/home-reseau/rguill/TP/Image/image-analysis/src/clean.sh");
-    testClassifyIcon();
-    testSizeDetector();
+    system("../src/clean.sh");
+//    testClassifyIcon();
+//    testSizeDetector();
     string basePath = "/home-info/commun/p/p12/5info/irfBD/NicIcon/";
     Matcher matcher;
     SizeDetector detector;
@@ -98,7 +98,8 @@ int main () {
             Point bottomCross = get<0>(crosses);
             Point topCross = get<1>(crosses);
             //TODO Image trimming and modification of the new crosses coordinate
-            std::vector<cv::Mat> extractedVec = extract(imagePath, imageName, 2201, 468, 257, 3232);
+            std::vector<cv::Mat> extractedVec = extract(imagePath, imageName, topCross.x, topCross.y,
+                    bottomCross.x, bottomCross.y);
 //            int _i = 0;
 //            for(int z = 0; z < 7; z++) {
 //                string p = "../ImageResult/Unclassified/0" + (k < 10 ? "0" + to_string(k) : to_string(k))
