@@ -21,6 +21,7 @@ using namespace cv;
 
 #include <iostream>
 #include <fstream>
+#include <cross_detector.h>
 #include "histogram.hpp"
 #include "reformat_image.h"
 #include "SizeDetector.h"
@@ -76,16 +77,16 @@ void testClassifyIcon() {
 }
 
 int main () {
-//    system("/home-reseau/xizheng/TP/Image/image-analysis/src/clean.sh");
-//    testClassifyIcon();
-//    testSizeDetector();
+    system("/home-reseau/rguill/TP/Image/image-analysis/src/clean.sh");
+    testClassifyIcon();
+    testSizeDetector();
     string basePath = "/home-info/commun/p/p12/5info/irfBD/NicIcon/";
     Matcher matcher;
     SizeDetector detector;
 
-    /* k: number of scriptor*/
-    for (int k = 0; k < 3 /*35*/; ++k) {
-        /* i: number of page*/
+    // k: number of scriptor
+    for (int k = 0; k < 335; ++k) {
+        // i: number of page
         for (int i = 0; i < 23; ++i) {
             string imagePath = basePath + "w0" + (k < 10 ? "0" + to_string(k) : to_string(k)) + "-scans/";
             string imageName = "0" + (k < 10 ? "0" + to_string(k) : to_string(k)) +
@@ -93,6 +94,10 @@ int main () {
             cout << "Parsing file: " << imagePath + imageName << endl;
             cout << "\t\t" << to_string(k * 22 + i) << "/" << to_string(35 * 22) <<
             "files\t\t\t" <<  (k * 22 + i) * 100 / (35 * 22) << "% completed " << endl;
+            tuple<Point,Point> crosses = searchCross(imagePath);
+            Point bottomCross = get<0>(crosses);
+            Point topCross = get<1>(crosses);
+            //TODO Image trimming and modification of the new crosses coordinate
             std::vector<cv::Mat> extractedVec = extract(imagePath, imageName, 2201, 468, 257, 3232);
 //            int _i = 0;
 //            for(int z = 0; z < 7; z++) {
@@ -100,22 +105,22 @@ int main () {
 //                           + "/"+ to_string(i) + "-" +to_string(_i++) + ".png";
 //                imwrite(p, extractedVec[z]);
 //            }
-            /* number of icon */
+            // number of icon
             for (int j = 0; j < 7; ++j) {
                 cv::Mat img = extractedVec[j];
                 string maxCls = matcher.classifyImage(img);
                 string sz = detector.detectSizeStr(img);
                 imwrite("../ImageResult/ClassifiedIcons/" + maxCls + "-" + to_string(k) + "-" + to_string(i) + "-" +
                     to_string(j) + ".png", img);
-                /* number of handwritten image */
+                // number of handwritten image
                 for (int l = 7 + j * 5; l <  7 + (j + 1) * 5; l++) {
                     cv::Mat _img = extractedVec[l];
                     string name = maxCls + "_0" + (k < 10 ? "0" + to_string(k) : to_string(k)) + "_" +
                             (i < 10 ? "0" + to_string(i) : to_string(i)) + "_" + to_string(j) +
                             to_string((l - 7) % 5);
-//                    cout << "Generate " << name << endl;
+                    cout << "Generate " << name << endl;
                     imwrite("../ImageResult/" + maxCls + "/" + name + ".png", _img);
-//                    // Write the txt file
+                    // Write the txt file
                     std::ofstream out("../ImageResult/" + maxCls + "/" + name + ".txt");
                     out << "label " << maxCls << endl;
                     out << "form 0" << (k < 10 ? "0" + to_string(k) : to_string(k)) <<
@@ -130,6 +135,18 @@ int main () {
             }
         }
     }
+
+   /* //Cross detection test
+    tuple<Point,Point> crosses = searchCross("/home-info/commun/p/p12/5info/irfBD/NicIcon/all-scans/00122.png");
+    circle(src,get<0>(crosses),4,Scalar(0,0,255),4);
+    circle(src,get<1>(crosses),4,Scalar(0,0,255),4);
+    double reduction = 3.5;
+    Size reduite(src.cols/reduction, src.rows/reduction);
+    Mat reducted = Mat(reduite,CV_8UC3);
+    resize(src,reducted,reduite);
+    imshow("crosses", reducted);*/
+
+
 	waitKey(0);
 	return EXIT_SUCCESS;
 }

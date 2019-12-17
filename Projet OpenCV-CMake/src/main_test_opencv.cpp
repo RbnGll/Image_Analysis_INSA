@@ -11,7 +11,8 @@
 #include <thresholding.h>
 #include <SquareExtractor.h>
 #include <matcher.h>
-
+#include <experimental/filesystem>
+namespace fs = std::experimental::filesystem;
 
 using namespace std;
 
@@ -28,7 +29,14 @@ using namespace cv;
 
 
 int main () {
-    string basePath = "/home-info/commun/p/p12/5info/irfBD/NicIcon/";
+//    string basePath = "/home-info/commun/p/p12/5info/irfBD/NicIcon/all-scans/";
+//    for (const auto & entry : fs::directory_iterator(basePath)) {
+//        std::cout << entry.path() << std::endl;
+//        int crossCoordinates[4];
+//        // TODO
+//        // fill in the coordinate array
+//        extract(entry.path(), crossCoordinates[0], crossCoordinates[1], crossCoordinates[2], crossCoordinates[3]);
+//    }
     Matcher matcher;
     /* k: number of scriptor*/
     for (int k = 0; k < 3 /*35*/; ++k) {
@@ -75,6 +83,17 @@ int main () {
             }
         }
     }
+
+//Cross detection test
+    Mat src = imread("/home-info/commun/p/p12/5info/irfBD/NicIcon/all-scans/03202.png");
+    tuple<Point,Point> crosses = searchCross(src);
+    circle(src,get<0>(crosses),25,Scalar(0,0,255),25);
+    circle(src,get<1>(crosses),2,Scalar(0,0,255),2);
+    double reduction = 3.5;
+    Size reduite(src.cols/reduction, src.rows/reduction);
+    Mat reducted = Mat(reduite,CV_8UC3);
+    resize(src,reducted,reduite);
+    imshow("crosses", reducted);
 	waitKey(0);
 	return EXIT_SUCCESS;
 }

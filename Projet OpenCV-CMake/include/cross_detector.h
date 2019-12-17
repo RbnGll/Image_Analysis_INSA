@@ -12,7 +12,7 @@ using namespace cv;
 
 
 
-
+Point recadrage(const Mat& src, Point init, bool cross, int step, int half_square_length);
 Point searchCrossCenter (const Mat& src, bool top);
 tuple<Point, Point> searchCross(const Mat& src);
 

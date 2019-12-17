@@ -11,10 +11,9 @@ using namespace std;
 using namespace cv;
 
 
-
-
+Point trimming(const Mat &src, Point init, bool cross, int step, int half_square_length);
 Point searchCrossCenter (const Mat& src, bool top);
-tuple<Point, Point> searchCross(const Mat& src);
+tuple<Point, Point> searchCross(const string& imagePath);
 
 
 #endif //PROJET_OPENCV_CMAKE_CROSS_DETECTOR_H
