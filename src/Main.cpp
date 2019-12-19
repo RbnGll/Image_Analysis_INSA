@@ -29,6 +29,7 @@ using namespace cv;
 #include "textscan.h"
 
 
+
 void generateUnclassifiedIcons() {
     int count = 0;
     string basePath = "/home-info/commun/p/p12/5info/irfBD/NicIcon/";
@@ -79,6 +80,7 @@ void testClassifyIcon() {
 }
 
 int main () {
+
     system("../src/clean.sh");
 //    testClassifyIcon();
 //    testSizeDetector();
@@ -100,6 +102,15 @@ int main () {
             Point bottomCross = get<0>(crosses);
             Point topCross = get<1>(crosses);
             //TODO Image trimming and modification of the new crosses coordinate
+            
+            //Image rotation
+            Mat src,dst;
+            src = imread(imagePath+imageName+".png");
+            dst = src.clone();
+            double rotationAngle = computeRotationAngle(bottomCross, topCross);
+            Point rotationCenter = Point ((topCross.x-bottomCross.x)/2.,(bottomCross.y-topCross.y)/2.);
+            rotateImage(src, dst, rotationCenter, rotationAngle);
+
             if (!textscan(imagePath+imageName+".png")) {
                 std::vector<cv::Mat> extractedVec = extract(imagePath, imageName, topCross.x, topCross.y,
                                                             bottomCross.x, bottomCross.y);
@@ -140,5 +151,9 @@ int main () {
             } // else unclassified ?
         }
     }
+    /*
+    Mat src,dst;
+    src=imread("../Images/Rotation\ tests/");
+     */
 	return EXIT_SUCCESS;
 }

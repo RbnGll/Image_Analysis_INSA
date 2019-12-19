@@ -15,7 +15,7 @@
 using namespace std;
 using namespace cv;
 
-void rotate_image(Mat src, Mat dst, Point rot_pt, double angle);
-double compute_rotation_angle(Point bas, Point haut);
+void rotateImage(Mat src, Mat dst, Point rot_pt, double angle);
+double computeRotationAngle(Point bas, Point haut);
 
 #endif //PROJET_OPENCV_CMAKE_REFORMAT_IMAGE_H
