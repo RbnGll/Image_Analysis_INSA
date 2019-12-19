@@ -5,36 +5,36 @@
 		<Option title="Projet_OpenCV_CMake"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\..\..\usr\local\opencv\;CMake Files\..\..\..\..\..\..\..\..\usr\local\opencv\lib\;CMake Files\..\..\..\..\..\..\..\..\usr\local\opencv\lib\cmake\;CMake Files\..\..\..\..\..\..\..\..\usr\local\opencv\lib\cmake\opencv4\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\opencv\;CMake Files\..\..\..\..\..\usr\local\opencv\lib\;CMake Files\..\..\..\..\..\usr\local\opencv\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\opencv\lib\cmake\opencv4\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/cmake-build-debug"/>
+				<Option working_dir="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement\ image/Projet/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement\ image/Projet/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement\ image/Projet/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement\ image/Projet/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/cmake-build-debug"/>
+				<Option working_dir="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement\ image/Projet/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement\ image/Projet/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement\ image/Projet/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement\ image/Projet/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Projet_OpenCV_CMake">
-				<Option output="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/cmake-build-debug/Projet_OpenCV_CMake" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/cmake-build-debug"/>
+				<Option output="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/Projet_OpenCV_CMake" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/include"/>
+					<Add directory="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/include"/>
 					<Add directory="/usr/local/opencv/include/opencv4"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
@@ -46,20 +46,20 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement\ image/Projet/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 Projet_OpenCV_CMake"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement\ image/Projet/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement\ image/Projet/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement\ image/Projet/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 Projet_OpenCV_CMake"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Projet_OpenCV_CMake/fast">
-				<Option output="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/cmake-build-debug/Projet_OpenCV_CMake" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/cmake-build-debug"/>
+				<Option output="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/Projet_OpenCV_CMake" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/include"/>
+					<Add directory="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/include"/>
 					<Add directory="/usr/local/opencv/include/opencv4"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
@@ -71,94 +71,94 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement\ image/Projet/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 Projet_OpenCV_CMake/fast"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement\ image/Projet/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement\ image/Projet/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement\ image/Projet/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 Projet_OpenCV_CMake/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/cmake-build-debug"/>
+				<Option working_dir="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement\ image/Projet/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement\ image/Projet/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement\ image/Projet/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement\ image/Projet/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/include/SquareExtractor.h">
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/include/SizeDetector.h">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/include/connected.h">
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/include/SquareExtractor.h">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/include/cross_detector.h">
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/include/connected.h">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/include/histogram.hpp">
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/include/cross_detector.h">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/include/matcher.h">
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/include/histogram.hpp">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/include/reformat_image.h">
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/include/matcher.h">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/include/textscan.h">
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/include/reformat_image.h">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/include/thresholding.h">
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/include/textscan.h">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/src/Main.cpp">
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/include/thresholding.h">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/src/SizeDetector.cpp">
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/src/Main.cpp">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/src/SizeDetector.h">
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/src/SizeDetector.cpp">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/src/SquareExtractor.cpp">
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/src/SquareExtractor.cpp">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/src/connected.cpp">
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/src/connected.cpp">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/src/cross_detector.cpp">
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/src/cross_detector.cpp">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/src/histogram.cpp">
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/src/histogram.cpp">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/src/matcher.cpp">
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/src/matcher.cpp">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/src/reformat_image.cpp">
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/src/reformat_image.cpp">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/src/textscan.cpp">
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/src/textscan.cpp">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/src/thresholding.cpp">
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/src/thresholding.cpp">
 			<Option target="Projet_OpenCV_CMake"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/CMakeLists.txt">
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/../../../../../../../../usr/local/opencv/lib/cmake/opencv4/OpenCVConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\opencv\lib\cmake\opencv4\"/>
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/../../../../../usr/local/opencv/lib/cmake/opencv4/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\opencv\lib\cmake\opencv4\"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/../../../../../../../../usr/local/opencv/lib/cmake/opencv4/OpenCVConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\opencv\lib\cmake\opencv4\"/>
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/../../../../../usr/local/opencv/lib/cmake/opencv4/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\opencv\lib\cmake\opencv4\"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/../../../../../../../../usr/local/opencv/lib/cmake/opencv4/OpenCVModules-release.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\opencv\lib\cmake\opencv4\"/>
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/../../../../../usr/local/opencv/lib/cmake/opencv4/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\opencv\lib\cmake\opencv4\"/>
 		</Unit>
-		<Unit filename="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/../../../../../../../../usr/local/opencv/lib/cmake/opencv4/OpenCVModules.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\opencv\lib\cmake\opencv4\"/>
+		<Unit filename="/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/../../../../../usr/local/opencv/lib/cmake/opencv4/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\opencv\lib\cmake\opencv4\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

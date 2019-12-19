@@ -39,10 +39,11 @@ void generateUnclassifiedIcons() {
             string imagePath = basePath + "w0" + (k < 10 ? "0" + to_string(k) : to_string(k)) + "-scans/";
             string imageName = "0" + (k < 10 ? "0" + to_string(k) : to_string(k)) +
                                (i < 10 ? "0" + to_string(i) : to_string(i));
+            Mat src = imread(imagePath+imageName+".png");
             cout << "Parsing file: " << imagePath + imageName << endl;
             cout << "\t\t" << to_string(k * 22 + i) << "/" << to_string(35 * 22) <<
                  "files\t\t\t" <<  (k * 22 + i) * 100 / (35 * 22) << "% completed " << endl;
-            std::vector<cv::Mat> extractedVec = extract(imagePath, imageName, 2201, 468, 257, 3232);
+            std::vector<cv::Mat> extractedVec = extract(src, 2201, 468, 257, 3232);
             int _i = 0;
             for(int z = 0; z < 7; z++) {
                 string p = "../ImageResult/UnclassifiedIcons/" + to_string(count++) + ".png";
@@ -92,27 +93,27 @@ int main () {
     for (int k = 0; k < 35; ++k) {
         // i: number of page
         for (int i = 0; i < 23; ++i) {
+            Mat src,dst;
             string imagePath = basePath + "w0" + (k < 10 ? "0" + to_string(k) : to_string(k)) + "-scans/";
             string imageName = "0" + (k < 10 ? "0" + to_string(k) : to_string(k)) +
                     (i < 10 ? "0" + to_string(i) : to_string(i));
             cout << "Parsing file: " << imagePath + imageName << endl;
             cout << "\t\t" << to_string(k * 22 + i) << "/" << to_string(35 * 22) <<
             "files\t\t\t" <<  (k * 22 + i) * 100 / (35 * 22) << "% completed " << endl;
-            tuple<Point,Point> crosses = searchCross(imagePath+imageName+".png");
-            Point bottomCross = get<0>(crosses);
-            Point topCross = get<1>(crosses);
-            //TODO Image trimming and modification of the new crosses coordinate
-            
-            //Image rotation
-            Mat src,dst;
             src = imread(imagePath+imageName+".png");
             dst = src.clone();
+            tuple<Point,Point> crosses = searchCross(src);
+            Point bottomCross = get<0>(crosses);
+            Point topCross = get<1>(crosses);
+            //Image rotation
             double rotationAngle = computeRotationAngle(bottomCross, topCross);
             Point rotationCenter = Point ((topCross.x-bottomCross.x)/2.,(bottomCross.y-topCross.y)/2.);
             rotateImage(src, dst, rotationCenter, rotationAngle);
-
-            if (!textscan(imagePath+imageName+".png")) {
-                std::vector<cv::Mat> extractedVec = extract(imagePath, imageName, topCross.x, topCross.y,
+            crosses = searchCross(dst);
+            bottomCross = get<0>(crosses);
+            topCross = get<1>(crosses);
+            if (!textscan(dst)) {
+                std::vector<cv::Mat> extractedVec = extract(dst, topCross.x, topCross.y,
                                                             bottomCross.x, bottomCross.y);
                 //            int _i = 0;
                 //            for(int z = 0; z < 7; z++) {

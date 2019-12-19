@@ -132,8 +132,7 @@ Point searchCrossCenter(const Mat &src, const bool top) {
     return {(int)crossX, (int)crossY};
 }
 
-tuple<Point,Point> searchCross (const string& imagePath) {
-    Mat src = imread(imagePath);
+tuple<Point,Point> searchCross (const Mat& src) {
     Point bottomCross = trimming(src, searchCrossCenter(src, false));
     Point topCross = trimming(src, searchCrossCenter(src, true));
 

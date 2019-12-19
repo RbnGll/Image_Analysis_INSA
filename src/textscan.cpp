@@ -9,9 +9,8 @@
 #include "opencv2/highgui.hpp"
 using namespace cv;
 
-bool textscan(std::string path){
-    Mat src, edgesImage,block;
-    src = imread("/home-info/commun/p/p12/5info/irfBD/NicIcon/all-scans/00022.png");
+bool textscan(Mat src){
+    Mat  edgesImage,block;
     Canny(src, edgesImage, 250, 500);
     //Noise deletion
     block = getStructuringElement(MORPH_RECT, Size(4, 4));
@@ -23,7 +22,7 @@ bool textscan(std::string path){
     Mat color_dst=src.clone();
     int cnt = 0;
     for (auto & l : lines){
-        if(norm(Point(l[0], l[1]) - Point(l[2], l[3]))>1500){
+        if(norm(Point(l[0], l[1]) - Point(l[2], l[3]))>1000){
             //line(color_dst, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, 8);
             cnt ++;
         }
@@ -34,5 +33,5 @@ bool textscan(std::string path){
 //    Mat reducted = Mat(reduite,CV_8UC3);
 //    resize(color_dst,reducted,reduite);
 //    imshow("lines",reducted);
-    return cnt >= 4;
+    return cnt > 5;
 }

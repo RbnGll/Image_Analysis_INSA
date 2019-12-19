@@ -9,8 +9,8 @@
 #include "SquareExtractor.h"
 using namespace cv;
 
-std::vector<cv::Mat> extract(std::string basePath, std::string name, int ur_X, int ur_Y, int ll_X, int ll_Y) {
-    std::string path = basePath + name + ".png";
+std::vector<cv::Mat> extract(Mat input, int ur_X, int ur_Y, int ll_X, int ll_Y) {
+    //std::string path = basePath + name + ".png";
     //                reference: 2145, 548, 294, 3162
     const int SIZE_X = 2480;     // Same size for all images
     const int SIZE_Y = 3508;
@@ -27,7 +27,7 @@ std::vector<cv::Mat> extract(std::string basePath, std::string name, int ur_X, i
     int xOffsets[5] = {330, 666, 988, 1320, 1660};
     int yOffsets[7] = {228, 554, 883, 1220, 1544, 1875, 2205};
 
-    cv::Mat input = cv::imread(path);
+    //cv::Mat input = cv::imread(path);
 //    cv::Mat croppedImage = getSquare(input, ll_X , ur_Y, (ur_X - ll_X) * scaleX, (ll_Y - ur_Y) * scaleY);
 
     //        cv::imshow("input", input);

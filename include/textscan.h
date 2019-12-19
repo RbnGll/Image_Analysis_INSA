@@ -5,9 +5,11 @@
 
 #ifndef PROJET_OPENCV_CMAKE_TEXTSCAN_H
 #define PROJET_OPENCV_CMAKE_TEXTSCAN_H
+#include "opencv2/imgproc.hpp"
+#include "opencv2/highgui.hpp"
 
 
-bool textscan (std::string path);
+bool textscan (cv::Mat src);
 
 
 #endif //PROJET_OPENCV_CMAKE_TEXTSCAN_H
