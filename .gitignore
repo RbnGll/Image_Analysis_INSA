@@ -13,3 +13,5 @@ _deps
 /cmake-build-debug/*
 /cmake-build-debug/CMakeFiles/*
 ImageResult
+.idea/*
+cmake-build-debug/*
