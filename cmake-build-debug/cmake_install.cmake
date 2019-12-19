@@ -1,8 +1,4 @@
-<<<<<<< HEAD:Projet OpenCV-CMake/cmake-build-debug/cmake_install.cmake
-# Install script for directory: /home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake
-=======
 # Install script for directory: /home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis
->>>>>>> 99379f0f886110857741171bea9155b11cb7772c:cmake-build-debug/cmake_install.cmake
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,9 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-<<<<<<< HEAD:Projet OpenCV-CMake/cmake-build-debug/cmake_install.cmake
-file(WRITE "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
-=======
 file(WRITE "/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
->>>>>>> 99379f0f886110857741171bea9155b11cb7772c:cmake-build-debug/cmake_install.cmake
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

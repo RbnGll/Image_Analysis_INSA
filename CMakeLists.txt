@@ -25,6 +25,6 @@ add_executable(Projet_OpenCV_CMake
         src/thresholding.cpp
         include/thresholding.h
         src/SizeDetector.cpp
-        src/SizeDetector.h)
+        src/SizeDetector.h src/textscan.cpp include/textscan.h)
 
 target_link_libraries(Projet_OpenCV_CMake ${OpenCV_LIBS})

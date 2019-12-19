@@ -22,9 +22,11 @@ using namespace cv;
 #include <iostream>
 #include <fstream>
 #include <cross_detector.h>
+#include <sys/stat.h>
 #include "histogram.hpp"
 #include "reformat_image.h"
 #include "SizeDetector.h"
+#include "textscan.h"
 
 
 void generateUnclassifiedIcons() {
@@ -85,7 +87,7 @@ int main () {
     SizeDetector detector;
 
     // k: number of scriptor
-    for (int k = 0; k < 335; ++k) {
+    for (int k = 0; k < 35; ++k) {
         // i: number of page
         for (int i = 0; i < 23; ++i) {
             string imagePath = basePath + "w0" + (k < 10 ? "0" + to_string(k) : to_string(k)) + "-scans/";
@@ -98,56 +100,45 @@ int main () {
             Point bottomCross = get<0>(crosses);
             Point topCross = get<1>(crosses);
             //TODO Image trimming and modification of the new crosses coordinate
-            std::vector<cv::Mat> extractedVec = extract(imagePath, imageName, topCross.x, topCross.y,
-                    bottomCross.x, bottomCross.y);
-//            int _i = 0;
-//            for(int z = 0; z < 7; z++) {
-//                string p = "../ImageResult/Unclassified/0" + (k < 10 ? "0" + to_string(k) : to_string(k))
-//                           + "/"+ to_string(i) + "-" +to_string(_i++) + ".png";
-//                imwrite(p, extractedVec[z]);
-//            }
-            // number of icon
-            for (int j = 0; j < 7; ++j) {
-                cv::Mat img = extractedVec[j];
-                string maxCls = matcher.classifyImage(img);
-                string sz = detector.detectSizeStr(img);
-                imwrite("../ImageResult/ClassifiedIcons/" + maxCls + "-" + to_string(k) + "-" + to_string(i) + "-" +
-                    to_string(j) + ".png", img);
-                // number of handwritten image
-                for (int l = 7 + j * 5; l <  7 + (j + 1) * 5; l++) {
-                    cv::Mat _img = extractedVec[l];
-                    string name = maxCls + "_0" + (k < 10 ? "0" + to_string(k) : to_string(k)) + "_" +
-                            (i < 10 ? "0" + to_string(i) : to_string(i)) + "_" + to_string(j) +
-                            to_string((l - 7) % 5);
-//                    cout << "Generate " << name << endl;
-                    imwrite("../ImageResult/" + maxCls + "/" + name + ".png", _img);
-                    // Write the txt file
-                    std::ofstream out("../ImageResult/" + maxCls + "/" + name + ".txt");
-                    out << "label " << maxCls << endl;
-                    out << "form 0" << (k < 10 ? "0" + to_string(k) : to_string(k)) <<
-                        (i < 10 ? "0" + to_string(i) : to_string(i)) << endl;
-                    out << "scripter 0" << (k < 10 ? "0" + to_string(k) : to_string(k)) << endl;
-                    out << "page" << (i < 10 ? "0" + to_string(i) : to_string(i)) << endl;
-                    out << "row " << i << endl;
-                    out << "column " << (l - 7) % 5 << endl;
-                    out << "size " << sz << endl;
-                    out.close();
+            if (!textscan(imagePath+imageName+".png")) {
+                std::vector<cv::Mat> extractedVec = extract(imagePath, imageName, topCross.x, topCross.y,
+                                                            bottomCross.x, bottomCross.y);
+                //            int _i = 0;
+                //            for(int z = 0; z < 7; z++) {
+                //                string p = "../ImageResult/Unclassified/0" + (k < 10 ? "0" + to_string(k) : to_string(k))
+                //                           + "/"+ to_string(i) + "-" +to_string(_i++) + ".png";
+                //                imwrite(p, extractedVec[z]);
+                //            }
+                // number of icon
+                for (int j = 0; j < 7; ++j) {
+                    cv::Mat img = extractedVec[j];
+                    string maxCls = matcher.classifyImage(img);
+                    string sz = detector.detectSizeStr(img);
+                    imwrite("../ImageResult/ClassifiedIcons/" + maxCls + "-" + to_string(k) + "-" + to_string(i) + "-" +
+                            to_string(j) + ".png", img);
+                    // number of handwritten image
+                    for (int l = 7 + j * 5; l < 7 + (j + 1) * 5; l++) {
+                        cv::Mat _img = extractedVec[l];
+                        string name = maxCls + "_0" + (k < 10 ? "0" + to_string(k) : to_string(k)) + "_" +
+                                      (i < 10 ? "0" + to_string(i) : to_string(i)) + "_" + to_string(j) +
+                                      to_string((l - 7) % 5);
+                        //                    cout << "Generate " << name << endl;
+                        imwrite("../ImageResult/" + maxCls + "/" + name + ".png", _img);
+                        // Write the txt file
+                        std::ofstream out("../ImageResult/" + maxCls + "/" + name + ".txt");
+                        out << "label " << maxCls << endl;
+                        out << "form 0" << (k < 10 ? "0" + to_string(k) : to_string(k)) <<
+                            (i < 10 ? "0" + to_string(i) : to_string(i)) << endl;
+                        out << "scripter 0" << (k < 10 ? "0" + to_string(k) : to_string(k)) << endl;
+                        out << "page" << (i < 10 ? "0" + to_string(i) : to_string(i)) << endl;
+                        out << "row " << i << endl;
+                        out << "column " << (l - 7) % 5 << endl;
+                        out << "size " << sz << endl;
+                        out.close();
+                    }
                 }
-            }
+            } // else unclassified ?
         }
     }
-
-   /* //Cross detection test
-    tuple<Point,Point> crosses = searchCross("/home-info/commun/p/p12/5info/irfBD/NicIcon/all-scans/00122.png");
-    circle(src,get<0>(crosses),4,Scalar(0,0,255),4);
-    circle(src,get<1>(crosses),4,Scalar(0,0,255),4);
-    double reduction = 3.5;
-    Size reduite(src.cols/reduction, src.rows/reduction);
-    Mat reducted = Mat(reduite,CV_8UC3);
-    resize(src,reducted,reduite);
-    imshow("crosses", reducted);*/
-
-
-	waitKey(0);
 	return EXIT_SUCCESS;
 }

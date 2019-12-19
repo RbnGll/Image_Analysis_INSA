@@ -12,3 +12,4 @@ _deps
 *.xml
 /cmake-build-debug/*
 /cmake-build-debug/CMakeFiles/*
+ImageResult

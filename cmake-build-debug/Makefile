@@ -48,17 +48,10 @@ RM = /usr/share/clion/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD:Projet OpenCV-CMake/cmake-build-debug/Makefile
-CMAKE_SOURCE_DIR = "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake"
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/cmake-build-debug"
-=======
 CMAKE_SOURCE_DIR = /home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug
->>>>>>> 99379f0f886110857741171bea9155b11cb7772c:cmake-build-debug/Makefile
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,15 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-<<<<<<< HEAD:Projet OpenCV-CMake/cmake-build-debug/Makefile
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles/progress.marks"
-	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" 0
-=======
 	$(CMAKE_COMMAND) -E cmake_progress_start /home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/CMakeFiles /home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/CMakeFiles 0
->>>>>>> 99379f0f886110857741171bea9155b11cb7772c:cmake-build-debug/Makefile
 .PHONY : all
 
 # The main clean target
@@ -135,6 +122,33 @@ Projet_OpenCV_CMake: cmake_check_build_system
 Projet_OpenCV_CMake/fast:
 	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/build
 .PHONY : Projet_OpenCV_CMake/fast
+
+src/Main.o: src/Main.cpp.o
+
+.PHONY : src/Main.o
+
+# target to build an object file
+src/Main.cpp.o:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/Main.cpp.o
+.PHONY : src/Main.cpp.o
+
+src/Main.i: src/Main.cpp.i
+
+.PHONY : src/Main.i
+
+# target to preprocess a source file
+src/Main.cpp.i:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/Main.cpp.i
+.PHONY : src/Main.cpp.i
+
+src/Main.s: src/Main.cpp.s
+
+.PHONY : src/Main.s
+
+# target to generate assembly for a file
+src/Main.cpp.s:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/Main.cpp.s
+.PHONY : src/Main.cpp.s
 
 src/SizeDetector.o: src/SizeDetector.cpp.o
 
@@ -271,33 +285,6 @@ src/histogram.cpp.s:
 	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/histogram.cpp.s
 .PHONY : src/histogram.cpp.s
 
-src/main_test_opencv.o: src/main_test_opencv.cpp.o
-
-.PHONY : src/main_test_opencv.o
-
-# target to build an object file
-src/main_test_opencv.cpp.o:
-	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.o
-.PHONY : src/main_test_opencv.cpp.o
-
-src/main_test_opencv.i: src/main_test_opencv.cpp.i
-
-.PHONY : src/main_test_opencv.i
-
-# target to preprocess a source file
-src/main_test_opencv.cpp.i:
-	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.i
-.PHONY : src/main_test_opencv.cpp.i
-
-src/main_test_opencv.s: src/main_test_opencv.cpp.s
-
-.PHONY : src/main_test_opencv.s
-
-# target to generate assembly for a file
-src/main_test_opencv.cpp.s:
-	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/main_test_opencv.cpp.s
-.PHONY : src/main_test_opencv.cpp.s
-
 src/matcher.o: src/matcher.cpp.o
 
 .PHONY : src/matcher.o
@@ -352,6 +339,33 @@ src/reformat_image.cpp.s:
 	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/reformat_image.cpp.s
 .PHONY : src/reformat_image.cpp.s
 
+src/textscan.o: src/textscan.cpp.o
+
+.PHONY : src/textscan.o
+
+# target to build an object file
+src/textscan.cpp.o:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/textscan.cpp.o
+.PHONY : src/textscan.cpp.o
+
+src/textscan.i: src/textscan.cpp.i
+
+.PHONY : src/textscan.i
+
+# target to preprocess a source file
+src/textscan.cpp.i:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/textscan.cpp.i
+.PHONY : src/textscan.cpp.i
+
+src/textscan.s: src/textscan.cpp.s
+
+.PHONY : src/textscan.s
+
+# target to generate assembly for a file
+src/textscan.cpp.s:
+	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/src/textscan.cpp.s
+.PHONY : src/textscan.cpp.s
+
 src/thresholding.o: src/thresholding.cpp.o
 
 .PHONY : src/thresholding.o
@@ -388,6 +402,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Projet_OpenCV_CMake"
 	@echo "... edit_cache"
+	@echo "... src/Main.o"
+	@echo "... src/Main.i"
+	@echo "... src/Main.s"
 	@echo "... src/SizeDetector.o"
 	@echo "... src/SizeDetector.i"
 	@echo "... src/SizeDetector.s"
@@ -403,15 +420,15 @@ help:
 	@echo "... src/histogram.o"
 	@echo "... src/histogram.i"
 	@echo "... src/histogram.s"
-	@echo "... src/main_test_opencv.o"
-	@echo "... src/main_test_opencv.i"
-	@echo "... src/main_test_opencv.s"
 	@echo "... src/matcher.o"
 	@echo "... src/matcher.i"
 	@echo "... src/matcher.s"
 	@echo "... src/reformat_image.o"
 	@echo "... src/reformat_image.i"
 	@echo "... src/reformat_image.s"
+	@echo "... src/textscan.o"
+	@echo "... src/textscan.i"
+	@echo "... src/textscan.s"
 	@echo "... src/thresholding.o"
 	@echo "... src/thresholding.i"
 	@echo "... src/thresholding.s"

@@ -59,17 +59,10 @@ RM = /usr/share/clion/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD:Projet OpenCV-CMake/cmake-build-debug/CMakeFiles/Makefile2
-CMAKE_SOURCE_DIR = "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake"
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/cmake-build-debug"
-=======
 CMAKE_SOURCE_DIR = /home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug
->>>>>>> 99379f0f886110857741171bea9155b11cb7772c:cmake-build-debug/CMakeFiles/Makefile2
 
 #=============================================================================
 # Target rules for target CMakeFiles/Projet_OpenCV_CMake.dir
@@ -78,11 +71,7 @@ CMAKE_BINARY_DIR = /home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis
 CMakeFiles/Projet_OpenCV_CMake.dir/all:
 	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/depend
 	$(MAKE) -f CMakeFiles/Projet_OpenCV_CMake.dir/build.make CMakeFiles/Projet_OpenCV_CMake.dir/build
-<<<<<<< HEAD:Projet OpenCV-CMake/cmake-build-debug/CMakeFiles/Makefile2
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8 "Built target Projet_OpenCV_CMake"
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target Projet_OpenCV_CMake"
->>>>>>> 99379f0f886110857741171bea9155b11cb7772c:cmake-build-debug/CMakeFiles/Makefile2
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target Projet_OpenCV_CMake"
 .PHONY : CMakeFiles/Projet_OpenCV_CMake.dir/all
 
 # Include target in all.
@@ -92,15 +81,9 @@ all: CMakeFiles/Projet_OpenCV_CMake.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Projet_OpenCV_CMake.dir/rule: cmake_check_build_system
-<<<<<<< HEAD:Projet OpenCV-CMake/cmake-build-debug/CMakeFiles/Makefile2
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" 8
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Projet_OpenCV_CMake.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home-reseau/brdaniel/INFO/INFO_4A/S7/Traitement image/Projet/image-analysis/Projet OpenCV-CMake/cmake-build-debug/CMakeFiles" 0
-=======
-	$(CMAKE_COMMAND) -E cmake_progress_start /home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Projet_OpenCV_CMake.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home-reseau/rguill/4INFO/Projet_analyse_image/image-analysis/cmake-build-debug/CMakeFiles 0
->>>>>>> 99379f0f886110857741171bea9155b11cb7772c:cmake-build-debug/CMakeFiles/Makefile2
 .PHONY : CMakeFiles/Projet_OpenCV_CMake.dir/rule
 
 # Convenience name for target.
