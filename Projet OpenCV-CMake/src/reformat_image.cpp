@@ -10,6 +10,7 @@
  * @param src source image matrix
  * @param dst destination image matrix
  * @param pt the point around which the image is going to rotate
+ *           it should ne the middle of the line formed by the two crosses
  * @param angle the angle in degrees of rotation to apply
  */
 void rotate_image(Mat src, Mat dst, Point pt, double angle){
@@ -31,5 +32,5 @@ double compute_rotation_angle(Point bottomCross, Point upperCross){
     //upperCross(x,y)=(2145,545)
     //bottomcross(x,y)=(293,3161)
     double ref_angle = atan((2145.-293.)/(545.-3161.));
-    return -(ref_angle-atan((double)(double)((double)upperCross.x-(double)bottomCross.x)/(double)((double)upperCross.y-(double)bottomCross.y)))*(180/CV_PI);
+    return -((ref_angle-atan((double)(double)((double)upperCross.x-(double)bottomCross.x)/(double)((double)upperCross.y-(double)bottomCross.y)))*(180/CV_PI))/2.;
 }

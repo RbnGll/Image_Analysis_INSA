@@ -23,7 +23,7 @@ using namespace cv;
 #include <iostream>
 #include <fstream>
 #include "histogram.hpp"
-#include "reformat_image.h"
+#include "../include/reformat_image.h"
 
 
 
@@ -68,14 +68,11 @@ int main () {
     Mat src,dst,red_dst;
     src=imread("../Images/Rotation\ test/00715.png");
     dst=src.clone();
-    Point2f pc(src.cols/2.,src.rows/2.);
+    Point2f pc((2192-187)/2,(3208-118)/2);
     double angle = compute_rotation_angle(Point(187,3208),Point(2192,118));
     rotate_image(src,dst,pc,angle);
     imwrite("src.png",src);
     imwrite("test.png",dst);
-
-    
-
 	waitKey(0);
 	return EXIT_SUCCESS;
 }
