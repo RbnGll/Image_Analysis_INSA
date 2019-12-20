@@ -127,7 +127,7 @@ int main () {
                     string maxCls = matcher.classifyImage(img);
                     string sz = detector.detectSizeStr(img);
                     imwrite("../ImageResult/ClassifiedIcons/" + maxCls + "-" + to_string(k) + "-" + to_string(i) + "-" +
-                            to_string(j) + ".png", img);
+                            to_string(j) + "-" + sz + ".png", img);
                     // number of handwritten image
                     for (int l = 7 + j * 5; l < 7 + (j + 1) * 5; l++) {
                         cv::Mat _img = extractedVec[l];
@@ -142,7 +142,7 @@ int main () {
                         out << "form 0" << (k < 10 ? "0" + to_string(k) : to_string(k)) <<
                             (i < 10 ? "0" + to_string(i) : to_string(i)) << endl;
                         out << "scripter 0" << (k < 10 ? "0" + to_string(k) : to_string(k)) << endl;
-                        out << "page" << (i < 10 ? "0" + to_string(i) : to_string(i)) << endl;
+                        out << "page " << (i < 10 ? "0" + to_string(i) : to_string(i)) << endl;
                         out << "row " << i << endl;
                         out << "column " << (l - 7) % 5 << endl;
                         out << "size " << sz << endl;

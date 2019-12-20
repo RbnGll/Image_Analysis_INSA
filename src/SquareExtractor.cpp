@@ -20,8 +20,8 @@ std::vector<cv::Mat> extract(Mat input, int ur_X, int ur_Y, int ll_X, int ll_Y) 
     double scaleX = (spanX + 0.0) / 1851;
     double scaleY = (spanY + 0.0) / 2614;
 
-    const int WINDOW_X = 220.0 * scaleX;
-    const int WINDOW_Y = 220.0 * scaleY;
+    const int WINDOW_X = 230.0 * scaleX;
+    const int WINDOW_Y = 230.0 * scaleY;
     
     int icon_offset = 0 - 35;
     int xOffsets[5] = {330, 666, 988, 1320, 1660};
@@ -37,8 +37,8 @@ std::vector<cv::Mat> extract(Mat input, int ur_X, int ur_Y, int ll_X, int ll_Y) 
     // Generate vector of handwritten images
     for (int j = 0; j < 7; ++j) {
         for (int i = 0; i < 5; ++i) {
-            int squareX = ll_X + (xOffsets[i]) * scaleX;
-            int squareY = ur_Y + (yOffsets[j]) * scaleY;
+            int squareX = ll_X + 7.0 + (xOffsets[i]) * scaleX;
+            int squareY = ur_Y + 10.0 + (yOffsets[j]) * scaleY;
             cv::Mat firstSquare = getSquare(input,
                                         squareX,
                                         squareY,
