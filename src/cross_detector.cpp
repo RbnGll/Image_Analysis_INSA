@@ -98,11 +98,11 @@ Point searchCrossCenter(const Mat &src, const bool top) {
     HoughLinesP(edgesImage, lines, 1, CV_PI/90, 80, 30, 10);
 
     //Lines drawing used to tune
-    /*Mat color_dst=crossMat.clone();
+    Mat color_dst=crossMat.clone();
     for (auto & i : lines){
         line(color_dst, Point(i[0], i[1]), Point(i[2], i[3]), Scalar(0, 0, 255), 3, 8);
     }
-    if(!top) imshow("lines", color_dst);*/
+    if(top) imshow("lines", color_dst);
 
     float crossY, crossX;
     if (top) {

@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "Cleaning the image result directory"
+rm ../ImaageResult/*
 rm -r ../ImageResult
 
 mkdir ../ImageResult

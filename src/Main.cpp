@@ -80,12 +80,76 @@ void testClassifyIcon() {
     classifyIcons(0.7f, 400);
 }
 
+void test() {
+    String basePath="../Images/donnees/";
+    Matcher matcher;
+    SizeDetector detector;
+    int k = 0;
+    for (int i = 0;  i< 12; i++) {
+        Mat src,dst;
+        string imagePath = basePath;
+        string imageName = "000" + (i < 10 ? "0" + to_string(i) : to_string(i));
+        src = imread(imagePath+imageName+".png");
+        dst = src.clone();
+        tuple<Point,Point> crosses = searchCross(src);
+        Point bottomCross = get<0>(crosses);
+        Point topCross = get<1>(crosses);
+        //Image rotation
+        double rotationAngle = computeRotationAngle(bottomCross, topCross);
+        Point rotationCenter = Point ((topCross.x-bottomCross.x)/2.,(bottomCross.y-topCross.y)/2.);
+        rotateImage(src, dst, rotationCenter, rotationAngle);
+        crosses = searchCross(dst);
+        bottomCross = get<0>(crosses);
+        topCross = get<1>(crosses);
+        if (!textscan(dst)) {
+            std::vector<cv::Mat> extractedVec = extract(dst, topCross.x, topCross.y,
+                                                        bottomCross.x, bottomCross.y);
+
+            // number of icon
+            for (int j = 0; j < 7; ++j) {
+                cv::Mat img = extractedVec[j];
+                string maxCls = matcher.classifyImage(img);
+                string sz = detector.detectSizeStr(img);
+
+                // number of handwritten image
+                for (int l = 7 + j * 5; l < 7 + (j + 1) * 5; l++) {
+                    cv::Mat _img = extractedVec[l];
+                    string name = maxCls + "_0" + (k < 10 ? "0" + to_string(k) : to_string(k)) + "_" +
+                                  (i < 10 ? "0" + to_string(i) : to_string(i)) + "_" + to_string(j) +
+                                  to_string((l - 7) % 5);
+                    //                    cout << "Generate " << name << endl;
+                    imwrite("../ImageResult/" + maxCls + "/" + name + ".png", _img);
+                    // Write the txt file
+                    std::ofstream out("../ImageResult/" + maxCls + "/" + name + ".txt");
+                    out << "label " << maxCls << endl;
+                    out << "form 0" << (k < 10 ? "0" + to_string(k) : to_string(k)) <<
+                        (i < 10 ? "0" + to_string(i) : to_string(i)) << endl;
+                    out << "scripter 0" << (k < 10 ? "0" + to_string(k) : to_string(k)) << endl;
+                    out << "page " << (i < 10 ? "0" + to_string(i) : to_string(i)) << endl;
+                    out << "row " << i << endl;
+                    out << "column " << (l - 7) % 5 << endl;
+                    out << "size " << sz << endl;
+                    out.close();
+                }
+            }
+        }
+    }
+
+}
+
 int main () {
 
     system("../src/clean.sh");
+
+     Mat src = imread("../Images/00000.png");
+     searchCross(src);
+    waitKey(0);
+//    test();
+//    return 0;
+
 //    testClassifyIcon();
 //    testSizeDetector();
-    string basePath = "/home-info/commun/p/p12/5info/irfBD/NicIcon/";
+    /*string basePath = "/home-info/commun/p/p12/5info/irfBD/NicIcon/";
     Matcher matcher;
     SizeDetector detector;
 
@@ -151,7 +215,7 @@ int main () {
                 }
             } // else unclassified ?
         }
-    }
+    }*/
     /*
     Mat src,dst;
     src=imread("../Images/Rotation\ tests/");
